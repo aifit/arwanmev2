@@ -1,0 +1,104 @@
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: $color-black;
+}
+
+html {
+	overflow-y: scroll;
+	@include fluid-type($min-width, $max-width, $min-font, $max-font);
+}
+
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: $color-white;
+	max-width: $max-width;
+
+	// sticky footer
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+  font-size: $mod-1*$mod-1*$mod-1*$mod-1 *1rem;
+  @include fluid-type($min-width, $max-width, $mod-1*$mod-1*$mod-1 *$min-font, $mod-2*$mod-2*$mod-2 *$min-font);
+}
+h2 {
+  font-size: $mod-1*$mod-1*$mod-1 *1rem;
+  @include fluid-type($min-width, $max-width, $mod-1*$mod-1*$mod-1 *$min-font, $mod-2*$mod-2*$mod-2 *$min-font);
+}
+h3 {
+  font-size: $mod-1*$mod-1 *1rem;
+  @include fluid-type($min-width, $max-width, $mod-1*$mod-1 *$min-font, $mod-2*$mod-2 *$min-font);
+}
+
+p:last-child {margin-bottom: 0;}
+
+p {line-height: 1.5;}
+
+li {
+	line-height: 1.5;
+}
+
+a {
+	color: $color-primary;
+	transition: $global-transition;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-primary-hover;
+	}
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375;
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}

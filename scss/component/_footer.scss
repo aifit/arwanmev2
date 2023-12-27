@@ -1,0 +1,10 @@
+.c-footer {
+	display: flex;
+	align-items: center;
+	padding: calc($global-space / 2) $global-space;
+	border-top: 1px solid $color-border;
+	position: relative;
+
+	// sticky footer
+	margin-top: auto;
+}

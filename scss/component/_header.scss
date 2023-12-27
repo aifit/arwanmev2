@@ -1,0 +1,16 @@
+.c-header {
+	display: flex;
+	align-items: center;
+	padding: 0 $global-space;
+	border-bottom: 1px solid $color-border;
+	position: relative;
+
+	&__item {
+		width: 50%;
+
+		&:last-child {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}
