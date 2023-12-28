@@ -81,11 +81,12 @@ pre,
 code {
 	font-family: var(--font-family-monospace);
 	padding: 1px 5px 3px;
-	background: #353535;
+	background: #555;
 	border-radius: 3px;
-	color: #fff;
+	color: #ddd;
 	font-size: 0.65rem;
 	font-weight: 300;
+	opacity: 0.9;
 }
 
 pre:not([class*="language-"]) {
@@ -110,6 +111,7 @@ code[class*="language-"] {
 	line-height: 1.7 !important;
 	font-family: var(--font-family-monospace);
 	font-weight: 300;
+	opacity: 1;
 }
 
 pre[class*="language-"] {
