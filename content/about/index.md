@@ -4,6 +4,10 @@ eleventyNavigation:
   key: About
   order: 4
 ---
-### About Me
 
-I am a person that writes stuff.
+Experienced software engineer with a background of building mobile applications in the education technology and job portal industries.
+
+Experienced in interactive video, video player and DRM.
+
+Specialties in Kotlin, Java and have some experience with Flutter, Golang, Node.js and microservices.
+
