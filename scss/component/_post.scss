@@ -42,23 +42,6 @@
 		h1, h2, h3, h4, h5, h6 {
 			max-width: $paragraph-width;
 		}
-
-		h3, h4, h5 {
-			position: relative;
-			padding-left: calc($global-space);
-		}
-
-		h4, h5 {
-			padding-left: calc($global-space/1.3);
-		}
-
-		.header-anchor {
-			position: absolute;
-			top: 0;
-			left: 0;
-			font-weight: normal;
-			height: 100%;
-		}
 	}
 
 	&__nav {

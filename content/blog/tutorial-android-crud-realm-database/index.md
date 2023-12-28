@@ -110,7 +110,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-### Menambahkan data Article:
+#### Menambahkan data Article:
 
 ```java
 private void addArticle(String title, String description) {
@@ -128,7 +128,7 @@ private void addArticle(String title, String description) {
 }
 ```
 
-### Menampilkan semua data Article:
+#### Menampilkan semua data Article:
 
 ```java
 private void findAllArticle() {
@@ -140,7 +140,7 @@ private void findAllArticle() {
 }
 ```
 
-### Mengupdate data Article:
+#### Mengupdate data Article:
 
 ```java
 private void updateArticle(String id, String title, String description) {
@@ -157,7 +157,7 @@ private void updateArticle(String id, String title, String description) {
 }
 ```
 
-Menghapus data Article:
+#### Menghapus data Article:
 
 ```java
 private void deleteArticle(int position) {
