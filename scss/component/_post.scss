@@ -1,0 +1,21 @@
+.c-post {
+	position: relative;
+	min-height: calc(100vh - 260px);
+	padding-bottom: $global-space * 3;
+
+	&__content {
+		p {
+			max-width: 38rem;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__nav {
+		position: absolute;
+		bottom: 0;
+	}
+}

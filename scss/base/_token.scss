@@ -12,8 +12,8 @@ $global-transition: all .2s ease;
 // fluid typography
 // https://css-tricks.com/snippets/css/fluid-typography/
 $min-width: 320px;
-$max-width: 1280px;
+$max-width: 1024px;
 $min-font: 16px;
 $max-font: 18px;
-$mod-1: 1.2; // mobile
-$mod-2: 1.5; // desktop
+$mod-1: 1.1; // mobile
+$mod-2: 1.3; // desktop

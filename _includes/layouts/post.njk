@@ -3,25 +3,39 @@ layout: layouts/base.njk
 ---
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
-<h2>{{ title }}</h2>
 
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+<div class="c-post">
 
-{{ content | safe }}
+	<h2 class="c-post__title">
+		{{ title }}
+	</h2>
 
-{%- if collections.posts %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
-{%- endif %}
+	<div class="c-post__meta">
+		<div class="c-post__time">
+			<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+		</div>
+		{%- for tag in tags | filterTagList %}
+		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+		<div class="c-post__tag">
+			<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+			{%- if not loop.last %} {% endif %}
+		</div>
+		{%- endfor %}
+	</div>
+
+	<div class="c-post__content">
+		{{ content | safe }}
+	</div>
+
+	{%- if collections.posts %}
+	{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+	{%- set nextPost = collections.posts | getNextCollectionItem %}
+	{%- if nextPost or previousPost %}
+	<div class="c-post__nav">
+		{%- if previousPost %}<div>Prev <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></div>{% endif %}
+		{%- if nextPost %}<div>Next <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></div>{% endif %}
+	</div>
+	{%- endif %}
+	{%- endif %}
+
+</div>
