@@ -1,25 +1,17 @@
 .c-post {
 	position: relative;
 	min-height: calc(100vh - 260px);
-	padding-bottom: $global-space * 3;
-
-	&__title {
-		max-width: $paragraph-width;
-	}
+	padding-bottom: $global-space;
 
 	&__meta {
 		display: flex;
 		align-items: center;
-		margin-top: -(calc($global-space / 1.5));
-		margin-bottom: $global-space;
-		padding-bottom: $global-space;
-		border-bottom: 1px solid $color-border;
-		max-width: $paragraph-width;
+		margin-top: -(calc($global-space / 2));
 	}
 
 	&__time,
 	&__tag {
-		font-size: 0.9rem;
+		font-size: 1.05rem;
 		color: $color-grey;
 	}
 
