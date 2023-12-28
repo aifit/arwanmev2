@@ -28,7 +28,6 @@
 	}
 
 	&__tag {
-		letter-spacing: 0.5px;
 		margin-right: calc($global-space/2);
 	}
 
@@ -36,6 +35,12 @@
 
 		p {
 			max-width: 38rem;
+		}
+
+		img {
+			max-width: initial;
+			width: 100% !important;
+			height: auto;
 		}
 
 		h3, h4, h5 {
@@ -55,7 +60,20 @@
 	}
 
 	&__nav {
+		width: 100%;
 		position: absolute;
 		bottom: 0;
+		display: flex;
+	}
+
+	&__nav-prev,
+	&__nav-next {
+		display: flex;
+		width: 100%;
+		display: flex;
+	}
+
+	&__nav-next {
+		justify-content: flex-end;
 	}
 }
