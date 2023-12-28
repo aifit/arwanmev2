@@ -7,6 +7,10 @@ tags:
 ---
 Halo, pada artikel ini kita akan belajar shared preferences di android. Fungsi dari shared preferences berbeda dengan database, shared preferences biasanya digunakan untuk menyimpan data pengaturan aplikasi kita seperti pengaturan tema, notifikasi atau menyimpan suatu nilai session, menyimpan skor terbaik dan masih banyak lagi.
 
+<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/MWbLpPU42AQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
 Disini saya menggunakan shared preferences untuk menyimpan nama dan nilai score. Yang pertama membuat nilai-nilai default yang akan disimpan ke shared preferences, yang dapat berguna sewaktu belum ada nilai dan sewaktu pengguna mereset aplikasi ke nilai atau pengaturan awal.
 
 ```java

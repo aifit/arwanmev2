@@ -80,11 +80,11 @@ pre,
 code {
 	font-family: var(--font-family-monospace);
 	padding: 1px 5px 3px;
-	background: #111;
+	background: #353535;
 	border-radius: 3px;
-	color: #d1d1d1;
+	color: #fff;
 	font-size: 0.65rem;
-	opacity: 0.85;
+	font-weight: 300;
 }
 
 pre:not([class*="language-"]) {
@@ -108,12 +108,32 @@ code[class*="language-"] {
 	font-size: 0.75rem;
 	line-height: 1.7 !important;
 	font-family: var(--font-family-monospace);
+	font-weight: 300;
 }
 
 pre[class*="language-"] {
-	background: #111;
+	background: rgba(0, 0, 0, .2);
 	line-height: 1 !important;
 	opacity: 1;
+	border-radius: 3px;
+	border: 2px solid $color-border;
+	margin-bottom: $global-space;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+	margin-bottom: $global-space;
+	border: 2px solid $color-border;
+	border-radius: 3px;
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
