@@ -26,3 +26,18 @@
     }
   }
 }
+
+@mixin breakpoint($range) {
+  $tablet: 960px;
+  $desktop: 1025px;
+
+  // tablet up
+  @if $range == tablet-up {
+    @media (min-width: $tablet) { @content; }
+  }
+
+  // desktop up
+  @else if $range == desktop-up {
+    @media (min-width: $desktop) { @content; }
+  }
+}
