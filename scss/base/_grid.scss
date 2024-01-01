@@ -1,0 +1,29 @@
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  &__item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+	&--center {
+		justify-content: center;
+	}
+
+	&--small {
+		margin-left: -10px;
+		margin-right: -10px;
+
+		.o-grid__item {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	&--align-bottom {
+		align-items: flex-end;
+	}
+}
