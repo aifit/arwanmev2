@@ -1,12 +1,12 @@
 .o-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -$global-space;
+  margin-right: -$global-space;
 
   &__item {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $global-space;
+    padding-right: $global-space;
   }
 
 	&--center {
@@ -14,12 +14,12 @@
 	}
 
 	&--small {
-		margin-left: -10px;
-		margin-right: -10px;
+		margin-left: -(calc($global-space/2));
+		margin-right: -(calc($global-space/2));
 
 		.o-grid__item {
-			padding-left: 10px;
-			padding-right: 10px;
+			padding-left: calc($global-space/2);
+			padding-right: calc($global-space/2);
 		}
 	}
 
