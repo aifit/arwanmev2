@@ -1,51 +1,13 @@
 ---
 layout: layouts/home.njk
-numberOfLatestPostsToShow: 3
+numberOfLatestPostsToShow: 5
 ---
 
 <div class="o-grid">
-	<div class="o-grid__item col-4">
-		<div class="c-profile">
-			<h3>About</h3>
-
-			<div class="c-avatar">
-				{% image "./ar1.png", "Arwan Salafudin Ashari" %}
-			</div>
-
-			<h4 class="c-profile__heading">{{ metadata.author.name }}</h4>
-			<p>{{ metadata.description }}</p>
-
-			<div class="c-list">
-				<a href="https://www.linkedin.com/in/arwansa" target="_blank" class="c-list__item">
-					<div class="c-list__icon">
-						{% include "icons/linkedin.njk" %}
-					</div>
-					<div class="c-list__text">
-						LinkedIn
-					</div>
-				</a>
-				<a href="https://docs.google.com/document/d/1AW_5SfDP8R4v580TmsfXhO2TW-uYPcGMl9cEr3wQAvI/edit?usp=drivesdk" target="_blank" class="c-list__item">
-					<div class="c-list__icon">
-						{% include "icons/cv.njk" %}
-					</div>
-					<div class="c-list__text">
-						Resume
-					</div>
-				</a>
-				<a href="https://github.com/arwansa" target="_blank" class="c-list__item">
-					<div class="c-list__icon">
-						{% include "icons/github.njk" %}
-					</div>
-					<div class="c-list__text">
-						GitHub
-					</div>
-				</a>
-			</div>
-		</div>
+	<div class="o-grid__item col-3">
+		{% include "profile.njk" %}
 	</div>
-	<div class="o-grid__item col-8">
-
-
+	<div class="o-grid__item col-9">
 
 		{% set postsCount = collections.posts | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -59,7 +21,6 @@ numberOfLatestPostsToShow: 3
 				can be found in
 				<a href="/blog/">the Blog</a>.</p>
 		{% endif %}
-
 
 		{% set postsCount = collections.porto | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -75,11 +36,11 @@ numberOfLatestPostsToShow: 3
 		{% endif %}
 
 		{# DEBUG: List of all url #}
-		{# <ul>
+		<ul>
 			{%- for entry in collections.all %}
 			<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
 			{%- endfor %}
-		</ul> #}
+		</ul>
 	</div>
 </div>
 

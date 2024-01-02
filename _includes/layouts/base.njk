@@ -37,82 +37,14 @@
   </head>
   <body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
-    <header class="c-header">
-			<div class="c-header__item">
-				<h1 class="c-logo">
-					<a href="/" class="c-logo__link" title="{{ metadata.title }}">
-						<div class="c-logo__text">
-							{{ metadata.logoText }}
-						</div>
-					</a>
-				</h1>
-			</div>
-			<div class="c-header__item">
-				<nav aria-label="Primary" class="c-nav">
-					<ul>
-						{%- for entry in collections.all | eleventyNavigation %}
-							<li>
-								<a href="{{ entry.url }}" {% if entry.url == page.url %} {% endif %}>{{ entry.title }}</a>
-							</li>
-						{%- endfor %}
-					</ul>
-				</nav>
-			</div>
-    </header>
+
+		{% include "header.njk" %}
+
     <main id="skip" class="c-body">
 			{{ content | safe }}
     </main>
-    <!-- Current page: {{ page.url | htmlBaseUrl }} -->
-		<footer class="c-footer">
-			<div class="o-grid">
-				<div class="o-grid__item col-6">
-					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="nofollow" title="Creative Commons License">CC BY-NC-SA 4.0</a>&nbsp;
-					{% year %} &copy;
-					Arwan S.A.
-				</div>
-				<div class="o-grid__item col-6">
-					<div class="c-list c-list--footer">
-						<a href="https://www.11ty.dev/" target="_blank" rel="nofollow" class="c-list__item" title="Made with Eleventy">
-							<div class="c-list__icon">
-								{% include "icons/code.njk" %}
-							</div>
-							<div class="c-list__text">
-								11ty
-							</div>
-						</a>
-					</div>
-					<div class="c-list c-list--footer">
-						<a href="https://tabler.io/icons" target="_blank" rel="nofollow" class="c-list__item" title="Icon from Tabler">
-							<div class="c-list__icon">
-								{% include "icons/icon.njk" %}
-							</div>
-							<div class="c-list__text">
-								Tabler
-							</div>
-						</a>
-					</div>
-					<div class="c-list c-list--footer">
-						<a href="https://yja.me" target="_blank" class="c-list__item" title="Crafted by Yahya J. Aifit">
-							<div class="c-list__icon">
-								{% include "icons/person.njk" %}
-							</div>
-							<div class="c-list__text">
-								yja.me
-							</div>
-						</a>
-					</div>
-					<div class="c-list c-list--footer">
-						<a href="/feed/feed.xml" target="_blank" class="c-list__item" title="RSS Feed">
-							<div class="c-list__icon">
-								{% include "icons/rss.njk" %}
-							</div>
-							<div class="c-list__text">
-								RSS
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</footer>
+
+		{% include "footer.njk" %}
+
   </body>
 </html>

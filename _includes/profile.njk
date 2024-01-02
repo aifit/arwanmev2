@@ -1,0 +1,37 @@
+<div class="c-profile">
+	<h3>About</h3>
+
+	<div class="c-avatar">
+		{% image "./ar1.png", "Arwan Salafudin Ashari" %}
+	</div>
+
+	<h4 class="c-profile__heading">{{ metadata.author.name }}</h4>
+	<p>{{ metadata.description }}</p>
+
+	<div class="c-list">
+		<a href="https://www.linkedin.com/in/arwansa" target="_blank" class="c-list__item">
+			<div class="c-list__icon">
+				{% include "icons/linkedin.njk" %}
+			</div>
+			<div class="c-list__text">
+				LinkedIn
+			</div>
+		</a>
+		<a href="https://docs.google.com/document/d/1AW_5SfDP8R4v580TmsfXhO2TW-uYPcGMl9cEr3wQAvI/edit?usp=drivesdk" target="_blank" class="c-list__item">
+			<div class="c-list__icon">
+				{% include "icons/cv.njk" %}
+			</div>
+			<div class="c-list__text">
+				Resume
+			</div>
+		</a>
+		<a href="https://github.com/arwansa" target="_blank" class="c-list__item">
+			<div class="c-list__icon">
+				{% include "icons/github.njk" %}
+			</div>
+			<div class="c-list__text">
+				GitHub
+			</div>
+		</a>
+	</div>
+</div>
