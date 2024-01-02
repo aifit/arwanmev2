@@ -7,6 +7,6 @@ module.exports = {
 	author: {
 		name: "Arwan Salafudin Ashari",
 		email: "arwansalafudina@gmail.com",
-		url: "https://arwan.me/about"
+		url: "https://arwan.me"
 	}
 }
