@@ -1,0 +1,36 @@
+.c-list {
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 3px 0;
+
+		&:hover {
+			svg {
+				stroke: #fff;
+			}
+		}
+	}
+
+	&__text {
+		margin-left: calc($global-space/3);
+		font-size: 0.9rem;
+	}
+
+	&--footer {
+		svg {
+			width: 16px;
+			height: 16px;
+			top: 1px;
+		}
+
+		.c-list__item {
+			display: inline-flex;
+		}
+
+		.c-list__text {
+			margin-left: calc($global-space/5);
+			font-size: 0.7rem;
+		}
+	}
+}

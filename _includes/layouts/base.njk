@@ -68,9 +68,16 @@
 				Arwan S.A.
 			</div>
 			<div class="c-footer__item">
-				<a href="/feed/feed.xml" target="_blank">
-					{% include "icons/rss.njk" %} RSS
-				</a>
+				<div class="c-list c-list--footer">
+					<a href="/feed/feed.xml" target="_blank" class="c-list__item">
+						<div class="c-list__icon">
+							{% include "icons/rss.njk" %}
+						</div>
+						<div class="c-list__text">
+							RSS
+						</div>
+					</a>
+				</div>
 			</div>
 		</footer>
   </body>
