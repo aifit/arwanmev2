@@ -2,5 +2,5 @@ module.exports = {
 	tags: [
 		"porto"
 	],
-	"layout": "layouts/post.njk",
+	"layout": "layouts/portfolio.njk",
 };

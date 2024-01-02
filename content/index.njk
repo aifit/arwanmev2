@@ -27,7 +27,7 @@ numberOfLatestPostsToShow: 5
 		<h3>Portfolio</h3>
 		{% set postslist = collections.porto | head(-1 * numberOfLatestPostsToShow) %}
 		{% set postslistCounter = postsCount %}
-		{% include "postslist.njk" %}
+		{% include "portfolio-list.njk" %}
 		{% set morePosts = postsCount - numberOfLatestPostsToShow %}
 		{% if morePosts > 0 %}
 			<p>{{ morePosts }} more portfolio{% if morePosts != 1 %}s{% endif %}

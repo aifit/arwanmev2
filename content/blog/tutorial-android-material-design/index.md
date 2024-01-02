@@ -3,7 +3,7 @@ title: Tutorial Android Material Design
 description: Tutorial membuat aplikasi android dengan menggunakan android design support library.
 date: 2015-10-09
 tags:
-  - tutorial
+  - Tutorial
 ---
 Tahu kan sekarang lagi musimnya material design? Mau tidak mau juga harus mengikutinya biar menjadi kekinian. Disini kita akan membuat aplikasi android dengan menggunakan android design support library, seperti : <code>NavigationView</code>, <code>TabLayout</code>, <code>TextInputLayout</code>, <code>Snackbar</code>, <code>CoordinatorLayout</code>, <code>AppBarLayout</code>, <code>CollapsingToolbarLayout</code> dan <code>FloatingActionButton</code> yang akan bermaterialan.
 

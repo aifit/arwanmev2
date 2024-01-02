@@ -3,7 +3,7 @@ title: Tutorial Android Shared Preferences
 description: This is a post on My Blog about agile frameworks.
 date: 2015-10-08
 tags:
-  - tutorial
+  - Tutorial
 ---
 Halo, pada artikel ini kita akan belajar shared preferences di android. Fungsi dari shared preferences berbeda dengan database, shared preferences biasanya digunakan untuk menyimpan data pengaturan aplikasi kita seperti pengaturan tema, notifikasi atau menyimpan suatu nilai session, menyimpan skor terbaik dan masih banyak lagi.
 
