@@ -1,6 +1,6 @@
 ---
 title: Tutorial Android Shared Preferences
-description: This is a post on My Blog about agile frameworks.
+description: Tutorial shared preferences di Android.
 date: 2015-10-08
 tags:
   - Tutorial
