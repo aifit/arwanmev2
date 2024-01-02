@@ -21,7 +21,7 @@
 
 		&:hover {
 			.c-postlist__date {
-				color: $color-white;
+				color: $color-white-lighter;
 			}
 		}
 
@@ -41,7 +41,7 @@
 	&__date {
 		width: 100%;
 		font-size: 0.8rem;
-		color: $color-grey-lighter;
+		color: $color-white;
 		transition: $global-transition;
 
 		@include breakpoint(tablet-up) {

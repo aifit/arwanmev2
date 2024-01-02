@@ -15,12 +15,17 @@ numberOfLatestPostsToShow: 5
 		{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 		{% set postslistCounter = postsCount %}
 		{% include "postslist.njk" %}
-		{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-		{% if morePosts > 0 %}
-			<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}
-				can be found in
-				<a href="/blog/">the Blog</a>.</p>
-		{% endif %}
+
+		<div class="c-more">
+			{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+			{% if morePosts > 0 %}
+				<div class="c-more__text">
+					{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}
+					can be found in the
+					<a class="c-more__link" href="/blog/">Blog</a>
+				</div>
+			{% endif %}
+		</div>
 
 		{% set postsCount = collections.porto | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -28,12 +33,18 @@ numberOfLatestPostsToShow: 5
 		{% set postslist = collections.porto | head(-1 * numberOfLatestPostsToShow) %}
 		{% set postslistCounter = postsCount %}
 		{% include "portfolio-list.njk" %}
-		{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-		{% if morePosts > 0 %}
-			<p>{{ morePosts }} more portfolio{% if morePosts != 1 %}s{% endif %}
-				can be found in
-				<a href="/blog/">the Blog</a>.</p>
-		{% endif %}
+
+
+		<div class="c-more">
+			{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+			{% if morePosts > 0 %}
+				<div class="c-more__text">
+					{{ morePosts }} more project{% if morePosts != 1 %}s{% endif %}
+					can be found in the
+					<a class="c-more__link" href="/portfolio/">Portfolio</a>
+				</div>
+			{% endif %}
+		</div>
 
 		{# DEBUG: List of all url #}
 		{# <ul>
