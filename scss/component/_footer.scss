@@ -1,9 +1,6 @@
 .c-footer {
-	display: flex;
-	align-items: center;
 	padding: calc($global-space / 2) $global-space;
 	border-top: 1px solid $color-grey;
-	position: relative;
 
 	// sticky footer
 	margin-top: auto;
@@ -19,13 +16,22 @@
 		}
 	}
 
-	&__item {
-		width: 50%;
-		display: flex;
-		align-items: center;
+	.o-grid {
+		&__item {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: calc($global-space/4);
 
-		&:last-child {
-			justify-content: flex-end;
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include breakpoint(tablet-up) {
+				&:last-child {
+					justify-content: flex-end;
+				}
+			}
 		}
 	}
 
@@ -33,6 +39,10 @@
 		margin-right: calc($global-space/1.5);
 
 		&:last-child {
+			margin-right: 0;
+		}
+
+		&__text {
 			margin-right: 0;
 		}
 	}

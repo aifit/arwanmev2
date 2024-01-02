@@ -12,22 +12,43 @@
   }
 
 	.col-1 {
-		max-width: calc(100% / 12);
+		width: 100%;
 	}
 	.col-2 {
-		max-width: calc(100% / 12 * 2);
+		width: 100%;
 	}
 	.col-3 {
-		max-width: calc(100% / 12 * 3);
+		width: 100%;
 	}
 	.col-4 {
-		max-width: calc(100% / 12 * 4);
+		width: 100%;
 	}
 	.col-5 {
-		max-width: calc(100% / 12 * 5);
+		width: 100%;
 	}
 	.col-6 {
-		max-width: calc(100% / 2);
+		width: 100%;
+	}
+
+	@include breakpoint(tablet-up) {
+		.col-1 {
+			width: calc(100% / 12);
+		}
+		.col-2 {
+			width: calc(100% / 12 * 2);
+		}
+		.col-3 {
+			width: calc(100% / 12 * 3);
+		}
+		.col-4 {
+			width: calc(100% / 12 * 4);
+		}
+		.col-5 {
+			width: calc(100% / 12 * 5);
+		}
+		.col-6 {
+			width: calc(100% / 2);
+		}
 	}
 
 	&--center {

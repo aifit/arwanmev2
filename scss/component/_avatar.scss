@@ -1,7 +1,6 @@
 .c-avatar {
-
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	border-radius: $global-radius;
 	overflow: hidden;
 	border: 2px solid $color-accent;
@@ -9,6 +8,11 @@
 	img {
 		width: 100%;
 		height: auto;
+	}
+
+	@include breakpoint(tablet-up) {
+		width: 150px;
+		height: 150px;
 	}
 
 }
