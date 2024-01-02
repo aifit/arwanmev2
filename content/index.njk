@@ -5,12 +5,18 @@ numberOfLatestPostsToShow: 3
 
 <div class="o-grid">
 	<div class="o-grid__item col-4">
-		Simple Bio
+		<h3>About</h3>
+		<h4>Find me on</h4>
+		{% include "icons/github.njk" %} Github
+		{% include "icons/linkedin.njk" %} LinkedIn
 	</div>
 	<div class="o-grid__item col-8">
+
+
+
 		{% set postsCount = collections.posts | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-		<h3>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h3>
+		<h3>Blog</h3>
 		{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 		{% set postslistCounter = postsCount %}
 		{% include "postslist.njk" %}
@@ -21,15 +27,34 @@ numberOfLatestPostsToShow: 3
 				<a href="/blog/">the Blog</a>.</p>
 		{% endif %}
 
-		{% image "./possum.png", "A possum parent and two possum kids hanging from the iconic red balloon" %}
+
+		{% set postsCount = collections.porto | length %}
+		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+		<h3>Portfolio</h3>
+		{% set postslist = collections.porto | head(-1 * numberOfLatestPostsToShow) %}
+		{% set postslistCounter = postsCount %}
+		{% include "postslist.njk" %}
+		{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+		{% if morePosts > 0 %}
+			<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}
+				can be found in
+				<a href="/blog/">the Blog</a>.</p>
+		{% endif %}
 
 
-		{# List every content page in the project #}
+
+
+
+		{# {% image "./possum.png", "A possum parent and two possum kids hanging from the iconic red balloon" %}}
 		<ul>
 			{%- for entry in collections.all %}
 			<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
 			{%- endfor %}
-		</ul>
+		</ul> #}
+
+
+
+
 	</div>
 </div>
 
