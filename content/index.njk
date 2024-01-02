@@ -30,17 +30,17 @@ numberOfLatestPostsToShow: 5
 		{% include "postslist.njk" %}
 		{% set morePosts = postsCount - numberOfLatestPostsToShow %}
 		{% if morePosts > 0 %}
-			<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}
+			<p>{{ morePosts }} more portfolio{% if morePosts != 1 %}s{% endif %}
 				can be found in
 				<a href="/blog/">the Blog</a>.</p>
 		{% endif %}
 
 		{# DEBUG: List of all url #}
-		<ul>
+		{# <ul>
 			{%- for entry in collections.all %}
 			<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
 			{%- endfor %}
-		</ul>
+		</ul> #}
 	</div>
 </div>
 

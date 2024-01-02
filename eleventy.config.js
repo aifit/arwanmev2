@@ -42,10 +42,13 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginBundle);
 
 	// Filters
-	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
-	});
+	eleventyConfig.addFilter("readableDate", (dateObj, zone) => {
+    const luxonDate = DateTime.fromJSDate(dateObj, { zone: zone || "utc" });
+    const customFormat = luxonDate.toFormat("LLL dd, yyyy");
+    const monthAbbreviation = luxonDate.toFormat("LLL").substr(0, 3);
+    const formattedDate = customFormat.replace(/(\w{3})/, monthAbbreviation);
+    return formattedDate;
+});
 
 	eleventyConfig.addFilter('htmlDateString', (dateObj) => {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string

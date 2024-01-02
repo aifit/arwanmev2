@@ -1,4 +1,45 @@
 .c-postlist {
 	padding-left: 0;
 	list-style: none;
+
+	&__item {
+		margin-bottom: calc($global-space/2);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include breakpoint(tablet-up) {
+			margin-bottom: calc($global-space/4);
+		}
+	}
+
+	&__link {
+		display: flex;
+		position: relative;
+
+		&:hover {
+			.c-postlist__date {
+				color: $color-white;
+			}
+		}
+
+		@include breakpoint(tablet-up) {
+			align-items: center;
+		}
+	}
+
+	&__text {
+		width: 70%;
+		display: inline;
+	}
+
+	&__date {
+		display: flex;
+		justify-content: flex-end;
+		width: 30%;
+		font-size: 0.8rem;
+		color: $color-grey-lighter;
+		transition: $global-transition;
+	}
 }
