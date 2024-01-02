@@ -18,4 +18,12 @@
 			color: $color-white-lighter;
 		}
 	}
+
+	&__item {
+		width: 50%;
+
+		&:last-child {
+			text-align: right;
+		}
+	}
 }

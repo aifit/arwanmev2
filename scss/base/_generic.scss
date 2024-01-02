@@ -149,6 +149,15 @@ pre[class*="language-"] {
 	margin-bottom: $global-space;
 }
 
+svg {
+	position: relative;
+	top: 3px;
+	width: 20px;
+	height: 20px;
+	stroke: $color-grey-lighter;
+	transition: $global-transition;
+}
+
 .video {
   position: relative;
   padding-bottom: 56.25%;

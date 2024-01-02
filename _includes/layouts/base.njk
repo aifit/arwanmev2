@@ -62,9 +62,16 @@
     </main>
     <!-- Current page: {{ page.url | htmlBaseUrl }} -->
 		<footer class="c-footer">
-			<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a>&nbsp;
-			{% year %} &copy;
-			Arwan SA
+			<div class="c-footer__item">
+				<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a>&nbsp;
+				{% year %} &copy;
+				Arwan S.A.
+			</div>
+			<div class="c-footer__item">
+				<a href="/feed/feed.xml" target="_blank">
+					{% include "icons/rss.njk" %} RSS
+				</a>
+			</div>
 		</footer>
   </body>
 </html>
