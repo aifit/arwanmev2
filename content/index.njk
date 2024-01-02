@@ -9,16 +9,16 @@ numberOfLatestPostsToShow: 3
 			<h3>About</h3>
 
 			<div class="c-avatar">
-				{% image "./ar1.png", "A possum parent and two possum kids hanging from the iconic red balloon" %}
+				{% image "./ar1.png", "Arwan Salafudin Ashari" %}
 			</div>
 
-			<h4 class="c-profile__heading">Arwan Salafudin Ashari</h4>
+			<h4 class="c-profile__heading">
+				{{ metadata.author.name }}
+			</h4>
 
 			<p>
-				Experienced software engineer with a background of building mobile applications in the education technology and job portal industries.
+				{{ metadata.description }}
 			</p>
-
-			<h4 class="c-profile__heading">Find me on</h4>
 
 			<div class="c-list">
 				<a href="https://www.linkedin.com/in/arwansa" target="_blank" class="c-list__item">
