@@ -57,6 +57,9 @@
 		position: absolute;
 		bottom: 0;
 		display: flex;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		letter-spacing: $global-letter-spacing;
 	}
 
 	&__nav-prev,
