@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="c-post">
+
+	<h2 class="c-post__title">
+		{{ title }}
+	</h2>
+
+	<div class="c-post__meta">
+		{%- for tag in tags | filterTagList %}
+		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+		<div class="c-post__tag">
+			Stack &nbsp;
+			<a href="{{ tagUrl }}">{{ tag }}</a>
+			{%- if not loop.last %} {% endif %}
+		</div>
+		{%- endfor %}
+	</div>
+
+	<div class="c-post__content">
+		{{ content | safe }}
+	</div>
+
+	<div class="c-post__meta">
+		<div class="c-post__tag">
+			{% if 'GitHub' in storage %}
+					View source code on
+			{% else %}
+					View
+			{% endif %}
+			<a href="{{ preview }}" target="_blank" rel="nofollow">
+					{{ storage }}
+			</a>
+		</div>
+	</div>
+
+	{%- if collections.porto %}
+	{%- set previousPost = collections.porto | getPreviousCollectionItem %}
+	{%- set nextPost = collections.porto | getNextCollectionItem %}
+	{%- if nextPost or previousPost %}
+	<div class="c-post__nav">
+		{%- if previousPost %}<div class="c-post__nav-prev">←&nbsp;<a href="{{ previousPost.url }}">Prev</a></div>{% endif %}
+		{%- if nextPost %}<div class="c-post__nav-next"><a href="{{ nextPost.url }}">Next</a>&nbsp;→</div>{% endif %}
+	</div>
+	{%- endif %}
+	{%- endif %}
+
+</div>

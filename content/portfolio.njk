@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Portfolio
+  order: 2
+---
+
+<h3>Portfolio</h3>
+{% set postslist = collections.porto %}
+{% include "portfolio-list.njk" %}

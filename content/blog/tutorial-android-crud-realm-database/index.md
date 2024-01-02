@@ -3,7 +3,7 @@ title: Tutorial Android CRUD Realm Database
 description: Tutorial membuat aplikasi android dengan menggunakan android design support library.
 date: 2015-10-10
 tags:
-  - tutorial
+  - Tutorial
 ---
 
 Halo, kali ini kita akan belajar CRUD sederhana menggunakan database Realm di android, yang saya gunakan sebagai pengganti SQLite dalam membuat aplikasi android yang berhubungan dengan database.

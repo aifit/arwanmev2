@@ -1,14 +1,21 @@
 // color
 $color-white: #a3a3a3;
-$color-black: #252525;
-$color-grey: #757575;
-$color-primary: #c2fc65;
-$color-primary-hover: #f5ffe4;
-$color-border: #383838;
+$color-white-lighter: #d3d3d3;
+
+$color-black: #111111;
+$color-black-lighter: #252525;
+
+$color-grey: #383838;
+$color-grey-lighter: #757575;
+
+$color-accent: #c2fc65;
+$color-accent-lighter: #f5ffe4;
 
 // global
 $global-space: 1.6rem;
 $global-transition: all .2s ease;
+$global-radius: 4px;
+$global-letter-spacing: 0.03em;
 
 // fluid typography
 // https://css-tricks.com/snippets/css/fluid-typography/

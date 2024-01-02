@@ -6,9 +6,9 @@
 				{% if post.data.title %}{{ post.data.title }}
 				{% else %}<code>{{ post.url }}</code>{% endif %}
 			</div>
-			<time class="c-postlist__date" datetime="{{ post.date | htmlDateString }}">
-				{{ post.date | readableDate() }}
-			</time>
+			<div class="c-postlist__date">
+				{{ post.data.tags | filterTagList }}
+			</div>
 		</a>
 	</li>
 {% endfor %}
