@@ -6,12 +6,11 @@
 	&__meta {
 		display: flex;
 		align-items: center;
-		margin-top: -(calc($global-space / 2));
+		margin-top: -(calc($global-space / 1.8));
 	}
 
 	&__time,
 	&__tag {
-		font-size: 1.05rem;
 		color: $color-grey-lighter;
 	}
 
