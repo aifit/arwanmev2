@@ -109,6 +109,10 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  eleventyConfig.addFilter("getPostCountByTag", function (collection, tag) {
+    return collection.filter((item) => item.data.tags && item.data.tags.includes(tag)).length;
+  });
+
 	return {
 		// Control which files Eleventy will process
 		// e.g.: *.md, *.njk, *.html, *.liquid
