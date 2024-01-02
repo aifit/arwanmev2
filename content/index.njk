@@ -5,10 +5,48 @@ numberOfLatestPostsToShow: 3
 
 <div class="o-grid">
 	<div class="o-grid__item col-4">
-		<h3>About</h3>
-		<h4>Find me on</h4>
-		{% include "icons/github.njk" %} Github
-		{% include "icons/linkedin.njk" %} LinkedIn
+		<div class="c-profile">
+			<h3>About</h3>
+
+			<div class="c-avatar">
+				{% image "./ar1.png", "A possum parent and two possum kids hanging from the iconic red balloon" %}
+			</div>
+
+			<h4 class="c-profile__heading">Arwan Salafudin Ashari</h4>
+
+			<p>
+				Experienced software engineer with a background of building mobile applications in the education technology and job portal industries.
+			</p>
+
+			<h4 class="c-profile__heading">Find me on</h4>
+
+			<div class="c-social">
+				<a href="https://www.linkedin.com/in/arwansa" target="_blank" class="c-social__item">
+					<div class="c-social__icon">
+						{% include "icons/linkedin.njk" %}
+					</div>
+					<div class="c-social__text">
+						LinkedIn
+					</div>
+				</a>
+				<a href="https://docs.google.com/document/d/1AW_5SfDP8R4v580TmsfXhO2TW-uYPcGMl9cEr3wQAvI/edit?usp=drivesdk" target="_blank" class="c-social__item">
+					<div class="c-social__icon">
+						{% include "icons/cv.njk" %}
+					</div>
+					<div class="c-social__text">
+						Resume
+					</div>
+				</a>
+				<a href="https://github.com/arwansa" target="_blank" class="c-social__item">
+					<div class="c-social__icon">
+						{% include "icons/github.njk" %}
+					</div>
+					<div class="c-social__text">
+						Github
+					</div>
+				</a>
+			</div>
+		</div>
 	</div>
 	<div class="o-grid__item col-8">
 
@@ -41,20 +79,12 @@ numberOfLatestPostsToShow: 3
 				<a href="/blog/">the Blog</a>.</p>
 		{% endif %}
 
-
-
-
-
-		{# {% image "./possum.png", "A possum parent and two possum kids hanging from the iconic red balloon" %}}
-		<ul>
+		{# DEBUG: List of all url #}
+		{# <ul>
 			{%- for entry in collections.all %}
 			<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
 			{%- endfor %}
 		</ul> #}
-
-
-
-
 	</div>
 </div>
 

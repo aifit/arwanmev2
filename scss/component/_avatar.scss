@@ -1,0 +1,13 @@
+.c-avatar {
+
+	width: 150px;
+	height: 150px;
+	border-radius: $global-radius;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+}
