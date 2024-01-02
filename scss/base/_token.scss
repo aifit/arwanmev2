@@ -12,7 +12,7 @@ $color-accent: #c2fc65;
 $color-accent-lighter: #f5ffe4;
 
 // global
-$global-space: 1.6rem;
+$global-space: 1.2rem;
 $global-transition: all .2s ease;
 $global-radius: 4px;
 $global-letter-spacing: 0.03em;
@@ -21,9 +21,9 @@ $global-letter-spacing: 0.03em;
 // https://css-tricks.com/snippets/css/fluid-typography/
 $min-width: 320px;
 $max-width: 1024px;
-$min-font: 16px;
-$max-font: 18px;
-$mod-1: 1.2; // mobile
-$mod-2: 1.38; // desktop
+$min-font: 18px;
+$max-font: 20px;
+$mod-1: 1.17; // mobile
+$mod-2: 1.3; // desktop
 
 $paragraph-width: 35rem;
