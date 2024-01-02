@@ -12,7 +12,7 @@
 	&__time,
 	&__tag {
 		font-size: 1.05rem;
-		color: $color-grey;
+		color: $color-grey-lighter;
 	}
 
 	&__time {
@@ -35,8 +35,8 @@
 			width: 100% !important;
 			height: auto;
 			margin-bottom: $global-space;
-			border: 2px solid $color-border;
-			border-radius: 3px;
+			border: 2px solid $color-grey;
+			border-radius: $global-radius;
 		}
 
 		h1, h2, h3, h4, h5, h6 {

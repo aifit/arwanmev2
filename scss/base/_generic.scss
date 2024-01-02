@@ -8,25 +8,25 @@
 /* Global stylesheet */
 * {
 	box-sizing: border-box;
-	scrollbar-color: $color-grey #111;
+	// firefox only
+	scrollbar-color: $color-grey-lighter $color-black;
 	scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
-  height: 6px;
-  width: 6px;
-	background: #111;
-	box-shadow: inset 1px 0px 2px 0px rgba(0, 0, 0, .3)
+	width: 8px;
+	height: 8px;
+	background: $color-black;
+	box-shadow: inset 1px 0px 2px 0px rgba(0, 0, 0, .9)
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: $color-grey;
-	border-radius: 3px;
+	background-color: $color-grey-lighter;
 }
 
 html,
 body {
-	background-color: $color-black;
+	background-color: $color-black-lighter;
 }
 
 html {
@@ -95,12 +95,12 @@ li {
 }
 
 a {
-	color: $color-primary;
+	color: $color-accent;
 	transition: $global-transition;
 	text-decoration: none;
 
 	&:hover {
-		color: $color-primary-hover;
+		color: $color-accent-lighter;
 	}
 }
 
@@ -117,7 +117,7 @@ code {
 	font-family: var(--font-family-monospace);
 	padding: 1px 5px 3px;
 	background: rgba(255, 255, 255, .1);
-	border-radius: 3px;
+	border-radius: $global-radius;
 	color: rgba(255, 255, 255, .4555);
 	font-size: 0.65rem;
 	font-weight: 300;
@@ -153,8 +153,8 @@ pre[class*="language-"] {
 	background: rgba(0, 0, 0, .2);
 	line-height: 1 !important;
 	opacity: 1;
-	border-radius: 3px;
-	border: 2px solid $color-border;
+	border-radius: $global-radius;
+	border: 2px solid $color-grey;
 	margin-bottom: $global-space;
 }
 
@@ -162,8 +162,8 @@ pre[class*="language-"] {
   position: relative;
   padding-bottom: 56.25%;
 	margin-bottom: $global-space;
-	border: 2px solid $color-border;
-	border-radius: 3px;
+	border: 2px solid $color-grey;
+	border-radius: $global-radius;
 }
 
 .video iframe {
