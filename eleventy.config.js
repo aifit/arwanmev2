@@ -79,7 +79,7 @@ module.exports = function(eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+		return (tags || []).filter(tag => ["all", "nav", "post", "posts", "porto"].indexOf(tag) === -1);
 	});
 
 	// Customize Markdown library settings:
