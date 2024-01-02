@@ -21,9 +21,19 @@
 
 	&__item {
 		width: 50%;
+		display: flex;
+		align-items: center;
 
 		&:last-child {
-			text-align: right;
+			justify-content: flex-end;
+		}
+	}
+
+	.c-list {
+		margin-right: calc($global-space/1.5);
+
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }
