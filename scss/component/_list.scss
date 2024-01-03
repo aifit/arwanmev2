@@ -3,7 +3,7 @@
 	&__item {
 		display: inline-flex;
 		align-items: center;
-		padding: 2px 0;
+		padding: calc($global-space/6) 0;
 
 		&:hover {
 			svg {

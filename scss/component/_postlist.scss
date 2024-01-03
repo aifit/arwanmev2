@@ -3,23 +3,21 @@
 	padding-left: 0;
 	list-style: none;
 
-	&__item {
-		margin-bottom: calc($global-space/2);
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-		@include breakpoint(tablet-up) {
-			margin-bottom: calc($global-space/4);
-		}
-	}
+	// &__item {}
 
 	&__link {
 		display: flex;
 		flex-wrap: wrap;
+		padding: calc($global-space/6.5) 0;
 
 		&:hover {
+
+			.c-postlist__text {
+				text-decoration-line: underline;
+				text-decoration-color: $color-accent;
+				text-decoration-thickness: 0.07em;
+			}
+
 			.c-postlist__date {
 				color: $color-white-lighter;
 			}
