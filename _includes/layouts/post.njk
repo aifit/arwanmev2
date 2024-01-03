@@ -26,18 +26,27 @@ layout: layouts/base.njk
 	<div class="c-post__content">
 		{{ content | safe }}
 	</div>
-
-	{%- if collections.posts %}
-	{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-	{%- set nextPost = collections.posts | getNextCollectionItem %}
-	{%- if nextPost or previousPost %}
-	<div class="c-post__nav">
-		{# {%- if previousPost %}<div class="c-post__nav-prev">←&nbsp;<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></div>{% endif %}
-		{%- if nextPost %}<div class="c-post__nav-next"><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>&nbsp;→</div>{% endif %} #}
-		{%- if previousPost %}<div class="c-post__nav-prev">←&nbsp;<a href="{{ previousPost.url }}">Prev</a></div>{% endif %}
-		{%- if nextPost %}<div class="c-post__nav-next"><a href="{{ nextPost.url }}">Next</a>&nbsp;→</div>{% endif %}
-	</div>
-	{%- endif %}
-	{%- endif %}
-
 </div>
+
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<div class="c-postnav">
+	{%- if previousPost %}
+	<div class="c-postnav__prev">
+		←&nbsp;
+		<a href="{{ previousPost.url }}">Prev</a>
+	</div>
+	{% endif %}
+	{%- if nextPost %}
+	<div class="c-postnav__next">
+		<a href="{{ nextPost.url }}">
+			Next
+		</a>
+		&nbsp;→
+		</div>
+	{% endif %}
+</div>
+{%- endif %}
+{%- endif %}

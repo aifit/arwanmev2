@@ -15,7 +15,6 @@
 			.c-postlist__text {
 				text-decoration-line: underline;
 				text-decoration-color: $color-accent;
-				text-decoration-thickness: 0.07em;
 			}
 
 			.c-postlist__date {
@@ -38,7 +37,7 @@
 
 	&__date {
 		width: 100%;
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 		color: $color-white;
 		transition: $global-transition;
 
