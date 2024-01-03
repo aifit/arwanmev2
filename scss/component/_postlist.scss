@@ -3,26 +3,28 @@
 	padding-left: 0;
 	list-style: none;
 
-	// &__item {}
+	&__item {
+		&:last-child {
+			.c-postlist__link {
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
 
 	&__link {
 		display: block;
-		padding: calc($global-space/5) 0;
+		padding: calc($global-space/5) 0 calc($global-space/3);
+		border-bottom: 1px solid $color-grey;
 
 		&:hover {
 
-			.c-postlist__text {
-				text-decoration-line: underline;
-				text-decoration-color: $color-grey-lighter;
-				text-decoration-thickness: 2px;
-			}
-
 			.c-postlist__date {
-				color: $color-white-lighter;
+				color: $color-white;
 			}
 
 			.c-postlist__desc {
-				color: $color-white;
+				color: $color-white-lighter;
 			}
 		}
 
@@ -46,8 +48,8 @@
 
 	&__date {
 		width: 100%;
-		font-size: 0.85rem;
-		color: $color-white;
+		font-size: 0.75rem;
+		color: $color-grey-lighter;
 		transition: $global-transition;
 
 		@include breakpoint(tablet-up) {
@@ -59,7 +61,7 @@
 
 	&__desc {
 		font-size: 0.85rem;
-		color: $color-grey-lighter;
+		color: $color-white;
 	}
 
 	&--unwrap {

@@ -1,4 +1,4 @@
-<ol reversed class="c-postlist c-postlist--unwrap">
+<ol reversed class="c-postlist">
 {% for post in postslist | reverse %}
 	<li class="c-postlist__item{% if post.url == url %}{% endif %}">
 		<a href="{{ post.url }}" class="c-postlist__link">
