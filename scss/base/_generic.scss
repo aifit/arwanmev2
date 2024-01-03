@@ -30,7 +30,6 @@ body {
 }
 
 html {
-	overflow-y: scroll;
 	@include fluid-type($min-width, $max-width, $min-font, $max-font);
 }
 
