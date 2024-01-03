@@ -3,10 +3,13 @@
 	min-height: calc(100vh - 253px);
 	padding-bottom: $global-space;
 
+	&__title {
+		margin-bottom: 0.8rem;
+	}
+
 	&__meta {
 		display: flex;
 		align-items: center;
-		margin-top: -(calc($global-space / 1.8));
 	}
 
 	&__time,
@@ -28,6 +31,7 @@
 		p {
 			max-width: $paragraph-width;
 			margin-bottom: $global-space;
+			font-size: 0.9rem;
 		}
 
 		img {
