@@ -14,11 +14,10 @@
 	width: 6px;
 	height: 6px;
 	background: $color-black;
-	box-shadow: inset 1px 0px 2px 0px rgba(0, 0, 0, .9)
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: $color-grey-lighter;
+	background-color: $color-grey;
 }
 
 html,
