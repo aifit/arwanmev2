@@ -4,6 +4,7 @@
 	text-transform: uppercase;
 	font-size: 0.85rem;
 	letter-spacing: $global-letter-spacing;
+	padding-bottom: $global-space * 1.5;
 
 	&__prev,
 	&__next {
