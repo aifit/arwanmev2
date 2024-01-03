@@ -9,6 +9,11 @@
 			svg {
 				stroke: #fff;
 			}
+
+			.c-list__text {
+				text-decoration-line: underline;
+				text-decoration-color: $color-accent;
+			}
 		}
 
 		@include breakpoint(tablet-up) {
@@ -32,6 +37,16 @@
 			width: 15px;
 			height: 15px;
 			top: 1.8px;
+		}
+
+		.c-list__item {
+
+			&:hover {
+				.c-list__text {
+					text-decoration: none;
+				}
+			}
+
 		}
 
 		.c-list__text {
