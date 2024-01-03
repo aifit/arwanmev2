@@ -11,6 +11,10 @@
 		text-transform: uppercase;
 		letter-spacing: $global-letter-spacing;
 		font-size: 0.75rem;
+
+		&:hover {
+			color: $color-white-lighter;
+		}
 	}
 
 }

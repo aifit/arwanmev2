@@ -9,11 +9,11 @@ $color-grey: #383838;
 $color-grey-lighter: #757575;
 
 $color-accent: #c2fc65;
-$color-accent-lighter: #e5fac2;
+$color-accent-lighter: #85bf22;
 
 // global
 $global-space: 1.2rem;
-$global-transition: none;
+$global-transition: all .2s ease, width 0s;
 $global-radius: 4px;
 $global-letter-spacing: 0.03em;
 
