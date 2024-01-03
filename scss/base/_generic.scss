@@ -59,12 +59,20 @@ h4, h5, h6 {
   @include fluid-type($min-width, $max-width, $mod-1*$min-font, $mod-2*$min-font);
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	color: $color-white-lighter;
+}
+
 .header-anchor {
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-weight: normal;
-	height: 100%;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// font-weight: normal;
+	// height: 100%;
+	display: none;
+	height: 0;
+	width: 0;
 }
 
 p:last-child {margin-bottom: 0;}
