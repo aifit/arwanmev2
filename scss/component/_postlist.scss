@@ -62,6 +62,7 @@
 	&__desc {
 		font-size: 0.93rem;
 		color: $color-white;
+		transition: $global-transition;
 	}
 
 	&--unwrap {
