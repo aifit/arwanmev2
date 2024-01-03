@@ -132,11 +132,11 @@ code[class*="language-"] {
 }
 
 pre[class*="language-"] {
-	background: rgba(0, 0, 0, .2);
+	background: rgba(0, 0, 0, .4);
 	line-height: 1 !important;
 	opacity: 1;
 	border-radius: $global-radius;
-	border: 2px solid $color-grey;
+	border: 1px solid $color-grey;
 	margin-bottom: $global-space;
 }
 
@@ -153,8 +153,9 @@ svg {
   position: relative;
   padding-bottom: 56.25%;
 	margin-bottom: $global-space;
-	border: 2px solid $color-grey;
+	border: 1px solid $color-grey;
 	border-radius: $global-radius;
+	overflow: hidden;
 }
 
 .video iframe {
