@@ -19,7 +19,7 @@
 	&__text {
 		margin-left: calc($global-space/4.5);
 		margin-right: calc($global-space/2.5);
-		font-size: 0.85rem;
+		font-size: 0.9rem;
 
 		@include breakpoint(tablet-up) {
 			margin-right: 0;
