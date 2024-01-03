@@ -62,7 +62,13 @@
 		color: $color-grey-lighter;
 	}
 
-	&--tag {
+	&--unwrap {
+		.c-postlist__text {
+			width: 70%;
+		}
+		.c-postlist__date {
+			width: 30%;
+		}
 		.c-postlist__link {
 			flex-wrap: nowrap;
 		}
