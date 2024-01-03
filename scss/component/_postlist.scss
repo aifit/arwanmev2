@@ -47,4 +47,14 @@
 			width: 30%;
 		}
 	}
+
+	&--tag {
+		.c-postlist__link {
+			flex-wrap: nowrap;
+		}
+		.c-postlist__date {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
 }

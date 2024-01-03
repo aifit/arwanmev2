@@ -4,7 +4,7 @@ layout: layouts/base.njk
 ---
 <h3>Tags</h3>
 
-<div class="c-postlist">
+<div class="c-postlist c-postlist--tag">
   {% for tag in collections.all | getAllTags | filterTagList %}
     {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
     {% set postCount = collections.all | getPostCountByTag(tag) %}
