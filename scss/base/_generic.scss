@@ -97,10 +97,10 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
-	padding: 1px 5px 3px;
-	background: rgba(255, 255, 255, .1);
+	padding: 1px 3px 1px;
+	background: rgba(0, 0, 0, .4);
 	border-radius: $global-radius;
-	color: rgba(255, 255, 255, .4555);
+	color: rgba(255, 255, 255, 0.5);
 	font-size: 0.65rem;
 	font-weight: 300;
 	// opacity: 0.5;
@@ -119,13 +119,13 @@ pre:not([class*="language-"]) {
 }
 
 code:not([class*="language-"]) {
-	font-size: 0.75rem;
+	font-size: 0.7rem;
 }
 
 pre[class*="language-"],
 code[class*="language-"] {
-	font-size: 0.75rem;
-	line-height: 1.7 !important;
+	font-size: 0.7rem;
+	line-height: 1.6 !important;
 	font-family: var(--font-family-monospace);
 	font-weight: 300;
 	opacity: 1;
