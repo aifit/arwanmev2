@@ -2,13 +2,15 @@
 {% for post in postslist | reverse %}
 	<li class="c-postlist__item{% if post.url == url %}{% endif %}">
 		<a href="{{ post.url }}" class="c-postlist__link">
-			<div class="c-postlist__text">
-				{% if post.data.title %}{{ post.data.title }}
-				{% else %}<code>{{ post.url }}</code>{% endif %}
+			<div class="c-postlist__link-content">
+				<div class="c-postlist__text">
+					{% if post.data.title %}{{ post.data.title }}
+					{% else %}<code>{{ post.url }}</code>{% endif %}
+				</div>
+				<time class="c-postlist__date" datetime="{{ post.date | htmlDateString }}">
+					{{ post.date | readableDate() }}
+				</time>
 			</div>
-			<time class="c-postlist__date" datetime="{{ post.date | htmlDateString }}">
-				{{ post.date | readableDate() }}
-			</time>
 		</a>
 	</li>
 {% endfor %}

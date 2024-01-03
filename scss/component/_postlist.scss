@@ -6,25 +6,34 @@
 	// &__item {}
 
 	&__link {
-		display: flex;
-		flex-wrap: wrap;
-		padding: calc($global-space/6.5) 0;
+		display: block;
+		padding: calc($global-space/5) 0;
 
 		&:hover {
 
 			.c-postlist__text {
 				text-decoration-line: underline;
-				text-decoration-color: $color-accent;
+				text-decoration-color: $color-grey-lighter;
+				text-decoration-thickness: 2px;
 			}
 
 			.c-postlist__date {
 				color: $color-white-lighter;
+			}
+
+			.c-postlist__desc {
+				color: $color-white;
 			}
 		}
 
 		@include breakpoint(tablet-up) {
 			align-items: center;
 		}
+	}
+
+	&__link-content {
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__text {
@@ -46,6 +55,11 @@
 			justify-content: flex-end;
 			width: 30%;
 		}
+	}
+
+	&__desc {
+		font-size: 0.85rem;
+		color: $color-grey-lighter;
 	}
 
 	&--tag {
