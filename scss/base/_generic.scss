@@ -103,7 +103,6 @@ code {
 	color: rgba(255, 255, 255, 0.5);
 	font-size: 0.65rem;
 	font-weight: 300;
-	// opacity: 0.5;
 }
 
 pre:not([class*="language-"]) {
@@ -128,16 +127,16 @@ code[class*="language-"] {
 	line-height: 1.6 !important;
 	font-family: var(--font-family-monospace);
 	font-weight: 300;
-	opacity: 1;
+	opacity: 0.82;;
 }
 
 pre[class*="language-"] {
 	background: rgba(0, 0, 0, .4);
 	line-height: 1 !important;
-	opacity: 1;
 	border-radius: $global-radius;
 	border: 1px solid $color-grey;
 	margin-bottom: $global-space;
+	opacity: 1;
 }
 
 svg {
