@@ -35,17 +35,23 @@ layout: layouts/base.njk
 <div class="c-postnav">
 	{%- if previousPost %}
 	<div class="c-postnav__prev">
-		{% include "icons/arrow-left.njk" %}
-		<a href="{{ previousPost.url }}">Prev</a>
+		<a class="c-postnav__link" href="{{ previousPost.url }}">
+			<div class="c-postnav__icon">
+				{% include "icons/arrow-left.njk" %}
+			</div>
+			Prev
+		</a>
 	</div>
 	{% endif %}
 	{%- if nextPost %}
 	<div class="c-postnav__next">
-		<a href="{{ nextPost.url }}">
+		<a class="c-postnav__link" href="{{ nextPost.url }}">
 			Next
+			<div class="c-postnav__icon">
+				{% include "icons/arrow-right.njk" %}
+			</div>
 		</a>
-		{% include "icons/arrow-right.njk" %}
-		</div>
+	</div>
 	{% endif %}
 </div>
 {%- endif %}
