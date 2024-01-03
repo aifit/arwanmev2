@@ -1,10 +1,14 @@
 .c-postnav {
-	width: 100%;
 	display: flex;
+	width: 100%;
 	text-transform: uppercase;
 	font-size: 0.85rem;
 	letter-spacing: $global-letter-spacing;
-	padding-bottom: $global-space * 1.5;
+	padding-top: $global-space;
+	padding-bottom: $global-space;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 
 	&__prev,
 	&__next {
@@ -12,8 +16,13 @@
 		width: 100%;
 	}
 
+	&__prev {
+		padding-left: $global-space;
+	}
+
 	&__next {
 		justify-content: flex-end;
+		padding-right: $global-space;
 	}
 
 	&__link {
