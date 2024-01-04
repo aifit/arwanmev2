@@ -4,10 +4,10 @@ numberOfLatestPostsToShow: 10
 ---
 
 <div class="o-grid o-grid--home">
-	<div class="o-grid__item col-3">
+	<div class="o-grid__item col-4">
 		{% include "profile.njk" %}
 	</div>
-	<div class="o-grid__item col-9">
+	<div class="o-grid__item col-8">
 
 		{% set postsCount = collections.posts | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}

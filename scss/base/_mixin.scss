@@ -28,7 +28,7 @@
 }
 
 @mixin breakpoint($range) {
-  $tablet: 960px;
+  $tablet: 768px;
   $desktop: 1025px;
 
   // tablet up
