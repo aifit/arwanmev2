@@ -1,14 +1,13 @@
 .c-profile {
 
 	&__heading {
-		font-size: 1.1rem;
 		line-height: 0.9rem;
 		margin-bottom: calc($global-space/2);
 	}
 
 	p {
-		font-size: 0.93rem;
-		max-width: 350px;
+		font-family: var(--font-body);
+		font-size: clamp(0.9rem, 0.9rem + ((1vw - 0.2rem) * 0.571), 1rem);
 	}
 
 }

@@ -29,7 +29,8 @@
 		p {
 			max-width: $paragraph-width;
 			margin-bottom: $global-space;
-			font-size: 0.93rem;
+			font-family: var(--font-body);
+			font-size: clamp(0.9rem, 0.9rem + ((1vw - 0.2rem) * 0.571), 1rem);
 		}
 
 		img {
