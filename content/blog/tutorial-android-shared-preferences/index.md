@@ -97,7 +97,7 @@ Apabila pada aplikasi anda menggunakan class App yang mengextends Application ta
 
 Nah, Setelah selesai membuat semuanya yang ada di atas, sekarang waktunya mengeksekusi shared preferences-nya tadi di Activity atau Fragment anda. Dan kali ini saya mengeksekusinya lewat Activity.
 
-#### Berikut potongan kode untuk menyimpan nama dan score ke dalam shared preferences:
+Berikut potongan kode untuk menyimpan nama dan score ke dalam shared preferences:
 
 ```java
 @OnClick(R.id.btnSave) void save() {
@@ -114,7 +114,7 @@ Nah, Setelah selesai membuat semuanya yang ada di atas, sekarang waktunya mengek
 }
 ```
 
-#### Berikut potongan kode untuk menampilkan data yang ada di shared preferences:
+Berikut potongan kode untuk menampilkan data yang ada di shared preferences:
 
 ```java
 @OnClick(R.id.btnShow) void show() {
@@ -122,7 +122,7 @@ Nah, Setelah selesai membuat semuanya yang ada di atas, sekarang waktunya mengek
 }
 ```
 
-#### Berikut potongan kode untuk mereset ulang data yang ada di shared preferences:
+Berikut potongan kode untuk mereset ulang data yang ada di shared preferences:
 
 ```java
 @OnClick(R.id.btnReset) void reset() {
@@ -132,7 +132,7 @@ Nah, Setelah selesai membuat semuanya yang ada di atas, sekarang waktunya mengek
 }
 ```
 
-#### Berikut kode lengkapnya <code>MainActivity.java</code>:
+Berikut kode lengkapnya <code>MainActivity.java</code>:
 
 ```java
 public class MainActivity extends AppCompatActivity {

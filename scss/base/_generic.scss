@@ -101,8 +101,6 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
-	padding: 1px 3px 1px;
-	background: rgba(0, 0, 0, .1);
 	border-radius: $global-radius;
 	color: $color-code;
 }
@@ -120,7 +118,7 @@ pre:not([class*="language-"]) {
 }
 
 code:not([class*="language-"]) {
-	font-size: 0.87rem;
+	font-size: 0.81rem;
 }
 
 pre[class*="language-"],
@@ -133,7 +131,7 @@ code[class*="language-"] {
 }
 
 pre[class*="language-"] {
-	background: rgba(0, 0, 0, .1);
+	background: rgba(0, 0, 0, .15);
 	line-height: 1 !important;
 	border-radius: $global-radius;
 	margin-bottom: $global-space;
