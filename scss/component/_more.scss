@@ -2,7 +2,7 @@
 
 	&__text {
 		margin-top: calc($global-space/1.5);
-		font-size: 0.85rem;
+		font-size: 0.93rem;
 		color: $color-grey-lighter;
 	}
 
@@ -11,6 +11,10 @@
 		text-transform: uppercase;
 		letter-spacing: $global-letter-spacing;
 		font-size: 0.75rem;
+
+		&:hover {
+			color: $color-white-lighter;
+		}
 	}
 
 }

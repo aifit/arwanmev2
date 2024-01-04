@@ -1,6 +1,6 @@
 // color
-$color-white: #a3a3a3;
-$color-white-lighter: #d3d3d3;
+$color-white: #a1a1a1;
+$color-white-lighter: #cacaca;
 
 $color-black: #111111;
 $color-black-lighter: #1d1d1d;
@@ -9,12 +9,12 @@ $color-grey: #383838;
 $color-grey-lighter: #757575;
 
 $color-accent: #c2fc65;
-$color-accent-lighter: #f5ffe4;
+$color-accent-lighter: #85bf22;
 
 // global
 $global-space: 1.2rem;
-$global-transition: none;
-$global-radius: 4px;
+$global-transition: all .2s ease, width 0s;
+$global-radius: 3px;
 $global-letter-spacing: 0.03em;
 
 // fluid typography
@@ -23,7 +23,7 @@ $min-width: 320px;
 $max-width: 1024px;
 $min-font: 19px;
 $max-font: 19px;
-$mod-1: 1.17; // mobile
-$mod-2: 1.3; // desktop
+$mod-1: 1.1; // mobile
+$mod-2: 1.17; // desktop
 
 $paragraph-width: 35rem;

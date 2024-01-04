@@ -14,11 +14,10 @@
 	width: 6px;
 	height: 6px;
 	background: $color-black;
-	box-shadow: inset 1px 0px 2px 0px rgba(0, 0, 0, .9)
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: $color-grey-lighter;
+	background-color: $color-grey;
 }
 
 html,
@@ -60,12 +59,20 @@ h4, h5, h6 {
   @include fluid-type($min-width, $max-width, $mod-1*$min-font, $mod-2*$min-font);
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	color: $color-white-lighter;
+}
+
 .header-anchor {
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-weight: normal;
-	height: 100%;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// font-weight: normal;
+	// height: 100%;
+	display: none;
+	height: 0;
+	width: 0;
 }
 
 p:last-child {margin-bottom: 0;}
@@ -97,13 +104,12 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
-	padding: 1px 5px 3px;
-	background: rgba(255, 255, 255, .1);
+	padding: 1px 3px 1px;
+	background: rgba(0, 0, 0, .4);
 	border-radius: $global-radius;
-	color: rgba(255, 255, 255, .4555);
+	color: rgba(255, 255, 255, 0.5);
 	font-size: 0.65rem;
 	font-weight: 300;
-	// opacity: 0.5;
 }
 
 pre:not([class*="language-"]) {
@@ -119,25 +125,25 @@ pre:not([class*="language-"]) {
 }
 
 code:not([class*="language-"]) {
-	font-size: 0.75rem;
+	font-size: 0.7rem;
 }
 
 pre[class*="language-"],
 code[class*="language-"] {
-	font-size: 0.75rem;
-	line-height: 1.7 !important;
+	font-size: 0.7rem;
+	line-height: 1.6 !important;
 	font-family: var(--font-family-monospace);
 	font-weight: 300;
-	opacity: 1;
+	opacity: 0.82;
 }
 
 pre[class*="language-"] {
-	background: rgba(0, 0, 0, .2);
+	background: rgba(0, 0, 0, .4);
 	line-height: 1 !important;
-	opacity: 1;
 	border-radius: $global-radius;
-	border: 2px solid $color-grey;
+	border: 1px solid $color-grey;
 	margin-bottom: $global-space;
+	opacity: 1;
 }
 
 svg {
@@ -153,8 +159,9 @@ svg {
   position: relative;
   padding-bottom: 56.25%;
 	margin-bottom: $global-space;
-	border: 2px solid $color-grey;
+	border: 1px solid $color-grey;
 	border-radius: $global-radius;
+	overflow: hidden;
 }
 
 .video iframe {

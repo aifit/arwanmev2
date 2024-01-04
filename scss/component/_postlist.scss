@@ -48,7 +48,7 @@
 
 	&__date {
 		width: 100%;
-		font-size: 0.75rem;
+		font-size: 0.8rem;
 		color: $color-grey-lighter;
 		transition: $global-transition;
 
@@ -60,8 +60,9 @@
 	}
 
 	&__desc {
-		font-size: 0.85rem;
+		font-size: 0.93rem;
 		color: $color-white;
+		transition: $global-transition;
 	}
 
 	&--unwrap {
