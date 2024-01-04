@@ -4,6 +4,12 @@
 	list-style: none;
 
 	&__item {
+		&:first-child {
+			.c-postlist__link {
+				border-top: 0;
+				padding-top: 0;
+			}
+		}
 		&:last-child {
 			.c-postlist__link {
 				border-bottom: 0;
@@ -14,7 +20,7 @@
 
 	&__link {
 		display: block;
-		padding: calc($global-space/5) 0 calc($global-space/3);
+		padding: calc($global-space/3) 0 calc($global-space/2);
 		border-bottom: 1px solid $color-grey;
 
 		&:hover {
@@ -54,6 +60,7 @@
 		font-size: 0.8rem;
 		color: $color-grey-lighter;
 		transition: $global-transition;
+		margin-top: 1px;
 
 		@include breakpoint(tablet-up) {
 			display: flex;
@@ -65,7 +72,8 @@
 	&__desc {
 		color: $color-white;
 		transition: $global-transition;
-		font-size: 0.9rem;
+		font-size: 0.85rem;
+		margin-top: 1px;
 	}
 
 	&--unwrap {
