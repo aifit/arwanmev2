@@ -40,6 +40,9 @@
 
 	&__text {
 		width: 100%;
+		font-size: 1.03rem;
+		letter-spacing: $global-letter-spacing;
+		font-family: var(--font-heading);
 
 		@include breakpoint(tablet-up) {
 			width: 70%;
@@ -60,9 +63,9 @@
 	}
 
 	&__desc {
-		font-size: 0.93rem;
 		color: $color-white;
 		transition: $global-transition;
+		font-size: 0.9rem;
 	}
 
 	&--unwrap {

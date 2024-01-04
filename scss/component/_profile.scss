@@ -1,14 +1,17 @@
 .c-profile {
 
 	&__heading {
-		font-size: 1.1rem;
-		line-height: 0.9rem;
 		margin-bottom: calc($global-space/2);
 	}
 
 	p {
-		font-size: 0.93rem;
-		max-width: 350px;
+		max-width: 400px;
+		font-family: var(--font-body);
+		font-size: 0.9rem;
+
+		@include breakpoint(tablet-up) {
+			max-width: 263px;
+		}
 	}
 
 }

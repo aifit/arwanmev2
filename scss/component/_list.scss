@@ -17,9 +17,11 @@
 	}
 
 	&__text {
+		font-size: 1.03rem;
 		margin-left: calc($global-space/4.5);
 		margin-right: calc($global-space/2.5);
-		font-size: 0.93rem;
+		letter-spacing: $global-letter-spacing;
+		font-family: var(--font-heading);
 
 		@include breakpoint(tablet-up) {
 			margin-right: 0;

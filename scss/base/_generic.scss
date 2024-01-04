@@ -1,5 +1,6 @@
 :root {
-	--font-family: 'Hanken Grotesk', -apple-system, system-ui, sans-serif;
+	--font-heading: 'Hanken Grotesk', -apple-system, system-ui, sans-serif;
+	--font-body: 'Inter', -apple-system, system-ui, sans-serif;
 	--font-family-monospace: 'Jetbrains Mono', Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -32,7 +33,7 @@ html {
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family);
+	font-family: var(--font-body);
 	color: $color-white;
 	max-width: $max-width;
 
@@ -62,14 +63,10 @@ h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	color: $color-white-lighter;
+	font-family: var(--font-heading);
 }
 
 .header-anchor {
-	// position: absolute;
-	// top: 0;
-	// left: 0;
-	// font-weight: normal;
-	// height: 100%;
 	display: none;
 	height: 0;
 	width: 0;
@@ -104,12 +101,8 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
-	padding: 1px 3px 1px;
-	background: rgba(0, 0, 0, .4);
 	border-radius: $global-radius;
-	color: rgba(255, 255, 255, 0.5);
-	font-size: 0.65rem;
-	font-weight: 300;
+	color: $color-code;
 }
 
 pre:not([class*="language-"]) {
@@ -125,25 +118,34 @@ pre:not([class*="language-"]) {
 }
 
 code:not([class*="language-"]) {
-	font-size: 0.7rem;
+	font-size: 0.81rem;
 }
 
 pre[class*="language-"],
 code[class*="language-"] {
-	font-size: 0.7rem;
-	line-height: 1.6 !important;
+	font-size: 0.75rem;
+	line-height: 1.65 !important;
 	font-family: var(--font-family-monospace);
 	font-weight: 300;
-	opacity: 0.82;
+	opacity: 0.85;
 }
 
 pre[class*="language-"] {
-	background: rgba(0, 0, 0, .4);
+	background: rgba(0, 0, 0, .15);
 	line-height: 1 !important;
 	border-radius: $global-radius;
-	border: 1px solid $color-grey;
 	margin-bottom: $global-space;
 	opacity: 1;
+
+	margin-right: calc($global-space * -1);
+	margin-left: calc($global-space * -1);
+
+	@include breakpoint(tablet-up) {
+		margin-right: 0;
+		margin-left: 0;
+		border-left: 3px solid $color-grey;
+	}
+
 }
 
 svg {
@@ -159,7 +161,6 @@ svg {
   position: relative;
   padding-bottom: 56.25%;
 	margin-bottom: $global-space;
-	border: 1px solid $color-grey;
 	border-radius: $global-radius;
 	overflow: hidden;
 }
