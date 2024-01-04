@@ -102,8 +102,9 @@ pre,
 code {
 	font-family: var(--font-family-monospace);
 	padding: 1px 3px 1px;
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, .1);
 	border-radius: $global-radius;
+	color: $color-code;
 }
 
 pre:not([class*="language-"]) {
@@ -124,20 +125,28 @@ code:not([class*="language-"]) {
 
 pre[class*="language-"],
 code[class*="language-"] {
-	font-size: 0.8rem;
-	line-height: 1.6 !important;
+	font-size: 0.75rem;
+	line-height: 1.65 !important;
 	font-family: var(--font-family-monospace);
 	font-weight: 300;
-	opacity: 0.82;
 }
 
 pre[class*="language-"] {
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, .1);
 	line-height: 1 !important;
 	border-radius: $global-radius;
-	border: 1px solid $color-grey;
 	margin-bottom: $global-space;
 	opacity: 1;
+
+	margin-right: calc($global-space * -1);
+	margin-left: calc($global-space * -1);
+
+	@include breakpoint(tablet-up) {
+		margin-right: 0;
+		margin-left: 0;
+		border-left: 3px solid $color-grey;
+	}
+
 }
 
 svg {
@@ -153,7 +162,6 @@ svg {
   position: relative;
   padding-bottom: 56.25%;
 	margin-bottom: $global-space;
-	border: 1px solid $color-grey;
 	border-radius: $global-radius;
 	overflow: hidden;
 }
