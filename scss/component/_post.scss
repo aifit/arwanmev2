@@ -57,7 +57,9 @@
 		}
 
 		&-link {
-			margin-right: calc($global-space/3);
+			a {
+				margin-right: calc($global-space/6);
+			}
 		}
 
 		a:hover {
