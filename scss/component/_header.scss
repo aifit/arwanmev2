@@ -1,0 +1,19 @@
+.c-header {
+	display: flex;
+	align-items: center;
+	padding: 0 $global-space;
+	border-bottom: 1px solid $color-grey;
+	height: 4rem;
+
+	&__item {
+		width: 30%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		&:last-child {
+			width: 70%;
+			justify-content: flex-end;
+		}
+	}
+}

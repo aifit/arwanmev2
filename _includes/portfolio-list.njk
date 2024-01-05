@@ -1,0 +1,20 @@
+<ol reversed class="c-postlist c-postlist--unwrap">
+{% for post in postslist | reverse %}
+	<li class="c-postlist__item{% if post.url == url %}{% endif %}">
+		<a href="{{ post.url }}" class="c-postlist__link">
+			<div class="c-postlist__link-content">
+				<div class="c-postlist__text">
+					{% if post.data.title %}{{ post.data.title }}
+					{% else %}<code>{{ post.url }}</code>{% endif %}
+				</div>
+				<div class="c-postlist__date">
+					{{ post.data.tags | filterTagList }}
+				</div>
+			</div>
+			<div class="c-postlist__desc">
+				{{ post.data.excerpt }}
+			</div>
+		</a>
+	</li>
+{% endfor %}
+</ol>

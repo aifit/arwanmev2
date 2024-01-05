@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+---
+{# Only include the syntax highlighter CSS on blog posts #}
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+
+<div class="c-post">
+
+	<h2 class="c-post__title">
+		{{ title }}
+	</h2>
+
+	<div class="c-post__meta">
+		<div class="c-post__time">
+			<div class="c-post__time-icon">
+			{% include "icons/calendar.njk" %}
+			</div>
+			<div class="c-post__time-text">
+				<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+			</div>
+		</div>
+		{%- for tag in tags | filterTagList %}
+		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+		<div class="c-post__tag">
+			<div class="c-post__tag-icon">
+				{% include "icons/tag.njk" %}
+			</div>
+			<div class="c-post__tag-link">
+				<a href="{{ tagUrl }}">{{ tag }}</a>
+			</div>
+			{%- if not loop.last %} {% endif %}
+		</div>
+		{%- endfor %}
+	</div>
+
+	<div class="c-post__content">
+		{{ content | safe }}
+	</div>
+</div>
+
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<div class="c-postnav">
+	{%- if previousPost %}
+	<div class="c-postnav__prev">
+		<a class="c-postnav__link" href="{{ previousPost.url }}">
+			<div class="c-postnav__icon">
+				{% include "icons/arrow-left.njk" %}
+			</div>
+			Prev
+		</a>
+	</div>
+	{% endif %}
+	{%- if nextPost %}
+	<div class="c-postnav__next">
+		<a class="c-postnav__link" href="{{ nextPost.url }}">
+			Next
+			<div class="c-postnav__icon">
+				{% include "icons/arrow-right.njk" %}
+			</div>
+		</a>
+	</div>
+	{% endif %}
+</div>
+{%- endif %}
+{%- endif %}

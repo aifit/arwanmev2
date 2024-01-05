@@ -1,0 +1,9 @@
+.c-body {
+	padding: 0 $global-space;
+	position: relative;
+	min-height: calc(100vh - 172px);
+
+	@include breakpoint(desktop-up) {
+		min-height: calc(100vh - 149px);
+	}
+}

@@ -1,0 +1,94 @@
+.c-postlist {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+
+	&__item {
+		&:first-child {
+			.c-postlist__link {
+				border-top: 0;
+				padding-top: 0;
+			}
+		}
+		&:last-child {
+			.c-postlist__link {
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: calc($global-space/3) 0 calc($global-space/2);
+		border-bottom: 1px solid $color-grey;
+
+		&:hover {
+
+			.c-postlist__date {
+				color: $color-white;
+			}
+
+			.c-postlist__desc {
+				color: $color-white-lighter;
+			}
+		}
+
+		@include breakpoint(tablet-up) {
+			align-items: center;
+		}
+	}
+
+	&__link-content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__text {
+		width: 100%;
+		font-size: 1.03rem;
+		letter-spacing: $global-letter-spacing;
+		font-family: var(--font-heading);
+
+		@include breakpoint(tablet-up) {
+			width: 70%;
+		}
+	}
+
+	&__date {
+		width: 100%;
+		font-size: 0.8rem;
+		color: $color-grey-lighter;
+		transition: $global-transition;
+		margin-top: 1px;
+
+		@include breakpoint(tablet-up) {
+			display: flex;
+			justify-content: flex-end;
+			width: 30%;
+		}
+	}
+
+	&__desc {
+		color: $color-white;
+		transition: $global-transition;
+		font-size: 0.85rem;
+		margin-top: 1px;
+	}
+
+	&--unwrap {
+		.c-postlist__text {
+			width: 70%;
+		}
+		.c-postlist__date {
+			width: 30%;
+		}
+		.c-postlist__link {
+			flex-wrap: nowrap;
+		}
+		.c-postlist__date {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+---
+permalink: /tags/
+layout: layouts/base.njk
+---
+<h3>Tags</h3>
+
+<div class="c-postlist c-postlist--unwrap">
+  {% for tag in collections.all | getAllTags | filterTagList %}
+    {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+    {% set postCount = collections.all | getPostCountByTag(tag) %}
+    <div class="c-postlist__item">
+      <a class="c-postlist__link" href="{{ tagUrl }}">
+				<div class="c-postlist__link-content">
+					<div class="c-postlist__text">
+						{{ tag }}
+					</div>
+					<div class="c-postlist__date">
+						{{ postCount }} data
+					</div>
+				</div>
+			</a>
+    </div>
+  {% endfor %}
+</div>
+

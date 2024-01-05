@@ -1,0 +1,185 @@
+:root {
+	--font-heading: 'Hanken Grotesk', -apple-system, system-ui, sans-serif;
+	--font-body: 'Inter', -apple-system, system-ui, sans-serif;
+	--font-family-monospace: 'Jetbrains Mono', Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+* {
+	box-sizing: border-box;
+	// firefox only
+	scrollbar-color: $color-grey-lighter $color-black;
+	scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+	background: $color-black;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $color-grey;
+}
+
+html,
+body {
+	background-color: $color-black-lighter;
+}
+
+html {
+	@include fluid-type($min-width, $max-width, $min-font, $max-font);
+}
+
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-body);
+	color: $color-white;
+	max-width: $max-width;
+
+	// sticky footer
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+  font-size: $mod-1*$mod-1*$mod-1*$mod-1 *1rem;
+  @include fluid-type($min-width, $max-width, $mod-1*$mod-1*$mod-1 *$min-font, $mod-2*$mod-2*$mod-2 *$min-font);
+}
+h2 {
+  font-size: $mod-1*$mod-1*$mod-1 *1rem;
+  @include fluid-type($min-width, $max-width, $mod-1*$mod-1*$mod-1 *$min-font, $mod-2*$mod-2*$mod-2 *$min-font);
+}
+h3 {
+  font-size: $mod-1*$mod-1 *1rem;
+  @include fluid-type($min-width, $max-width, $mod-1*$mod-1 *$min-font, $mod-2*$mod-2 *$min-font);
+}
+h4, h5, h6 {
+  font-size: $mod-1 *1rem;
+  @include fluid-type($min-width, $max-width, $mod-1*$min-font, $mod-2*$min-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	color: $color-white-lighter;
+	font-family: var(--font-heading);
+}
+
+.header-anchor {
+	display: none;
+	height: 0;
+	width: 0;
+}
+
+p:last-child {margin-bottom: 0;}
+
+p {line-height: 1.5;}
+
+li {
+	line-height: 1.5;
+}
+
+a {
+	color: $color-accent;
+	transition: $global-transition;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-accent-lighter;
+	}
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+	border-radius: $global-radius;
+	color: $color-code;
+}
+
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+
+code:not([class*="language-"]) {
+	font-size: 0.81rem;
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+	font-size: 0.75rem;
+	line-height: 1.65 !important;
+	font-family: var(--font-family-monospace);
+	font-weight: 300;
+	opacity: 0.85;
+}
+
+pre[class*="language-"] {
+	background: rgba(0, 0, 0, .15);
+	line-height: 1 !important;
+	border-radius: $global-radius;
+	margin-bottom: $global-space;
+	opacity: 1;
+
+	margin-right: calc($global-space * -1);
+	margin-left: calc($global-space * -1);
+
+	@include breakpoint(tablet-up) {
+		margin-right: 0;
+		margin-left: 0;
+		border-left: 3px solid $color-grey;
+	}
+
+}
+
+svg {
+	position: relative;
+	top: 2px;
+	width: 21px;
+	height: 21px;
+	stroke: $color-grey-lighter;
+	transition: $global-transition;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+	margin-bottom: $global-space;
+	border-radius: $global-radius;
+	overflow: hidden;
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}

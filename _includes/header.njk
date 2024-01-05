@@ -1,0 +1,22 @@
+<header class="c-header">
+	<div class="c-header__item">
+		<h1 class="c-logo">
+			<a href="/" class="c-logo__link" title="{{ metadata.title }}">
+				<div class="c-logo__text">
+					{{ metadata.logoText }}
+				</div>
+			</a>
+		</h1>
+	</div>
+	<div class="c-header__item">
+		<nav aria-label="Primary" class="c-nav">
+			<ul>
+				{%- for entry in collections.all | eleventyNavigation %}
+					<li>
+						<a href="{{ entry.url }}" {% if entry.url == page.url %} {% endif %}>{{ entry.title }}</a>
+					</li>
+				{%- endfor %}
+			</ul>
+		</nav>
+	</div>
+</header>
