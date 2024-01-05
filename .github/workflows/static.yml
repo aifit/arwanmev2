@@ -24,6 +24,9 @@ jobs:
       - name: Build
         run: npm run build
 
+			- name: Show output directory contents
+				run: ls -R ./_site
+
   deploy:
     runs-on: ubuntu-latest
 
