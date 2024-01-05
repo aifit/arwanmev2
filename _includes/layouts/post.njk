@@ -12,16 +12,22 @@ layout: layouts/base.njk
 
 	<div class="c-post__meta">
 		<div class="c-post__time">
+			<div class="c-post__time-icon">
 			{% include "icons/calendar.njk" %}
-			<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+			</div>
+			<div class="c-post__time-text">
+				<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+			</div>
 		</div>
 		{%- for tag in tags | filterTagList %}
 		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 		<div class="c-post__tag">
-			<a href="{{ tagUrl }}">
+			<div class="c-post__tag-icon">
 				{% include "icons/tag.njk" %}
-				{{ tag }}
-			</a>
+			</div>
+			<div class="c-post__tag-link">
+				<a href="{{ tagUrl }}">{{ tag }}</a>
+			</div>
 			{%- if not loop.last %} {% endif %}
 		</div>
 		{%- endfor %}

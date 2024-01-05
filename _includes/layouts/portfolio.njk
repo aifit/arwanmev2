@@ -12,9 +12,15 @@ layout: layouts/base.njk
 		{%- for tag in tags | filterTagList %}
 		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 		<div class="c-post__tag">
-			{% include "icons/code.njk" %}
-			Stack
-			<a href="{{ tagUrl }}">{{ tag }}</a>
+			<div class="c-post__tag-icon">
+				{% include "icons/code.njk" %}
+			</div>
+			<div class="c-post__tag-text">
+				Stack
+			</div>
+			<div class="c-post__tag-link">
+				<a href="{{ tagUrl }}">{{ tag }}</a>
+			</div>
 			{%- if not loop.last %} {% endif %}
 		</div>
 		{%- endfor %}
@@ -27,15 +33,25 @@ layout: layouts/base.njk
 	<div class="c-post__meta">
 		<div class="c-post__tag">
 			{% if 'GitHub' in storage %}
-				{% include "icons/github.njk" %}
-				View on
+				<div class="c-post__tag-icon">
+					{% include "icons/github.njk" %}
+				</div>
+				<div class="c-post__tag-text">
+					View on
+				</div>
 			{% else %}
-				{% include "icons/file.njk" %}
-				View
+				<div class="c-post__tag-icon">
+					{% include "icons/file.njk" %}
+				</div>
+				<div class="c-post__tag-text">
+					View
+				</div>
 			{% endif %}
-			<a href="{{ preview }}" target="_blank" rel="nofollow">
+			<div class="c-post__tag-link">
+				<a href="{{ preview }}" target="_blank" rel="nofollow">
 					{{ storage }}
-			</a>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
