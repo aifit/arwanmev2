@@ -23,9 +23,11 @@
 	&__time {
 		display: flex;
 		margin-right: calc($global-space/2);
+		line-height: 1.6;
 
 		@include breakpoint(tablet-up) {
 			align-items: center;
+			line-height: initial;
 		}
 
 		&-icon {
@@ -39,9 +41,11 @@
 
 	&__tag {
 		display: flex;
+		line-height: 1.6;
 
 		@include breakpoint(tablet-up) {
 			align-items: center;
+			line-height: initial;
 		}
 
 		&-icon {
