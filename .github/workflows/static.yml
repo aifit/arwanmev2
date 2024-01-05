@@ -1,10 +1,10 @@
-name: Build Eleventy
+name: Build & Deploy Eleventy
 on:
   push:
     branches:
       - main
 jobs:
-  build and deploy:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
