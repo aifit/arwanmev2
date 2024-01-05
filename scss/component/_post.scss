@@ -8,21 +8,57 @@
 	&__meta {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
+		margin-top: -10px;
 	}
 
 	&__time,
 	&__tag {
+		display: flex;
 		color: $color-grey-lighter;
 		font-size: 1.03rem;
 		font-family: var(--font-heading);
+		margin-top: 10px;
+		line-height: 1.6;
+
+		@include breakpoint(tablet-up) {
+			align-items: center;
+			line-height: initial;
+		}
 	}
 
 	&__time {
 		margin-right: calc($global-space/2);
+
+		&-icon {
+			margin-right: calc($global-space/3);
+		}
+
+		&-text {
+			margin-right: calc($global-space/3);
+		}
 	}
 
 	&__tag {
-		margin-right: calc($global-space/2);
+		&-icon {
+			margin-right: calc($global-space/3);
+		}
+
+		&-text {
+			margin-right: calc($global-space/3);
+		}
+
+		&-link {
+			a {
+				margin-right: calc($global-space/6);
+			}
+		}
+
+		a:hover {
+			svg {
+				stroke: $color-white;
+			}
+		}
 	}
 
 	&__content {
@@ -49,15 +85,6 @@
 
 		h1, h2, h3, h4, h5, h6 {
 			max-width: $paragraph-width;
-		}
-
-		h3, h4, h5 {
-			position: relative;
-			// padding-left: calc($global-space);
-		}
-
-		h4, h5 {
-			// padding-left: calc($global-space/1.3);
 		}
 	}
 }
