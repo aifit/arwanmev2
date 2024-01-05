@@ -8,6 +8,10 @@
 	&__meta {
 		display: flex;
 		align-items: center;
+
+		svg {
+			margin-bottom: -2px;
+		}
 	}
 
 	&__time,
@@ -18,11 +22,17 @@
 	}
 
 	&__time {
-		margin-right: calc($global-space/2);
+		margin-right: calc($global-space/1);
 	}
 
 	&__tag {
 		margin-right: calc($global-space/2);
+
+		a:hover {
+			svg {
+				stroke: $color-white;
+			}
+		}
 	}
 
 	&__content {
@@ -58,6 +68,15 @@
 
 		h4, h5 {
 			// padding-left: calc($global-space/1.3);
+		}
+	}
+
+	&--porto {
+		.c-post__time {
+			margin-right: 0;
+		}
+		.c-post__tag {
+			margin-right: 0;
 		}
 	}
 }
