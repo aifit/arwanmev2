@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        uses: TartanLlama/actions-eleventy@master
+        uses: TartanLlama/actions-eleventy@main
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
