@@ -52,11 +52,6 @@
 	</url>
 	
 	<url>
-		<loc>https://arwan.me/tags/tutorial/</loc>
-		<lastmod>2024-01-06</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://arwan.me/tags/porto/</loc>
 		<lastmod>2024-01-06</lastmod>
 	</url>
@@ -73,6 +68,11 @@
 	
 	<url>
 		<loc>https://arwan.me/tags/flutter/</loc>
+		<lastmod>2024-01-06</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://arwan.me/tags/tutorial/</loc>
 		<lastmod>2024-01-06</lastmod>
 	</url>
 </urlset>
