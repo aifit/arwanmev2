@@ -46,7 +46,7 @@
 
 	&__text {
 		width: 100%;
-		font-size: 1.05rem;
+		font-size: 1.06rem;
 		letter-spacing: $global-letter-spacing;
 		font-family: $font-heading;
 
@@ -57,7 +57,7 @@
 
 	&__date {
 		width: 100%;
-		font-size: 0.8rem;
+		font-size: 0.85rem;
 		color: $color-grey-lighter;
 		transition: $global-transition;
 		margin-top: 1px;
@@ -72,8 +72,8 @@
 	&__desc {
 		color: $color-white;
 		transition: $global-transition;
-		font-size: 0.85rem;
 		margin-top: 1px;
+		font-size: 0.9rem;
 	}
 
 	&--unwrap {
