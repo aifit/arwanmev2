@@ -1,12 +1,12 @@
 // global
 $global-space: 1.2rem;
-$global-transition: all .2s ease, width 0s;
-$global-radius: 2px;
+$global-transition: all .2s ease-in-out, width 0s;
+$global-radius: 4px;
 $global-letter-spacing: 0.009em;
 
 // color
 $color-white: #ababab;
-$color-white-lighter: #cecece;
+$color-white-lighter: #d1d1d1;
 $color-black: #111111;
 $color-black-lighter: #1d1d1d;
 $color-grey: #3a3a3a;
