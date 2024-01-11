@@ -16,23 +16,4 @@
 			color: $color-white-lighter;
 		}
 	}
-
-	.o-grid {
-		&__item {
-			display: flex;
-			align-items: center;
-			justify-content: flex-start;
-			margin-bottom: calc($global-space/4);
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-
-			@include breakpoint(tablet-up) {
-				&:last-child {
-					justify-content: flex-end;
-				}
-			}
-		}
-	}
 }

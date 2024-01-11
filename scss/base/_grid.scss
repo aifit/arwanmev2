@@ -123,4 +123,25 @@
 	&--align-bottom {
 		align-items: flex-end;
 	}
+
+	&--footer {
+		.o-grid__item {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: calc($global-space/2);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include breakpoint(tablet-up) {
+				margin-bottom: 0;
+
+				&:last-child {
+					justify-content: flex-end;
+				}
+			}
+		}
+	}
 }
