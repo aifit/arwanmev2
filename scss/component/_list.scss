@@ -3,30 +3,37 @@
 	&__item {
 		display: inline-flex;
 		align-items: center;
-		padding: calc($global-space/6) 0;
 
 		&:hover {
 			.c-list__text {
 				color: $color-white-lighter;
+				border-color: $color-accent-lighter;
 			}
 			svg {
-				stroke: $color-white-lighter;
+				stroke: $color-accent-lighter;
 			}
 		}
 
 		@include breakpoint(tablet-up) {
 			display: flex;
+			padding: calc($global-space/5) 0;
 		}
 	}
 
+	svg {
+		stroke: $color-accent;
+	}
+
 	&__text {
-		font-size: 0.83rem;
-		text-transform: uppercase;
 		margin-left: calc($global-space/4.5);
 		margin-right: calc($global-space/2.5);
 		letter-spacing: $global-letter-spacing;
 		color: $color-white;
 		transition: $global-transition;
+		font-family: $font-heading;
+		border-bottom: 1px solid transparent;
+		position: relative;
+		top: 1px;
 
 		@include breakpoint(tablet-up) {
 			margin-right: 0;
@@ -35,15 +42,27 @@
 	}
 
 	&--footer {
+		margin-right: calc($global-space/1.5);
+
+		&:last-child {
+			margin-right: 0;
+		}
+
 		svg {
 			width: 15px;
 			height: 15px;
-			top: 1.8px;
+			top: 1px;
+			stroke: $color-grey-lighter;
 		}
 
 		.c-list__text {
 			margin-left: calc($global-space/5);
 			font-size: 0.7rem;
+			font-family: $font-body;
+			color: $color-white;
+			margin-right: 0;
+			border: 0;
+			top: 0;
 		}
 	}
 }

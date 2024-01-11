@@ -35,16 +35,4 @@
 			}
 		}
 	}
-
-	.c-list {
-		margin-right: calc($global-space/1.5);
-
-		&:last-child {
-			margin-right: 0;
-		}
-
-		&__text {
-			margin-right: 0;
-		}
-	}
 }
