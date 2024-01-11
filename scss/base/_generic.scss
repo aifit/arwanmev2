@@ -119,18 +119,20 @@ code:not([class*="language-"]) {
 	font-size: 0.81rem;
 }
 
-code .highlight-line:before {
-  -webkit-user-select: none;
-  border-right: 1px solid $color-grey;
-  color: $color-grey-lighter;
-  content: counter(lineNumber);
-  counter-increment: lineNumber;
-  display: inline-block;
-  font-variant-numeric: tabular-nums;
-  margin-right: $global-space/2;
-  padding-right: $global-space/2;
-  text-align: center;
-	width: $global-space;
+// line number inside code higlighter
+code:not([class*="language-diff-"]) {
+	.highlight-line:before {
+		border-right: 1px solid $color-grey;
+		color: $color-grey-lighter;
+		content: counter(lineNumber);
+		counter-increment: lineNumber;
+		display: inline-block;
+		font-variant-numeric: tabular-nums;
+		margin-right: $global-space/2;
+		padding-right: $global-space/2;
+		text-align: center;
+		width: $global-space;
+	}
 }
 
 pre[class*="language-"],
