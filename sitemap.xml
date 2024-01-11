@@ -52,7 +52,17 @@
 	</url>
 	
 	<url>
+		<loc>https://arwan.me/tags/tutorial/</loc>
+		<lastmod>2024-01-11</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://arwan.me/tags/porto/</loc>
+		<lastmod>2024-01-11</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://arwan.me/tags/android/</loc>
 		<lastmod>2024-01-11</lastmod>
 	</url>
 	
@@ -63,16 +73,6 @@
 	
 	<url>
 		<loc>https://arwan.me/tags/flutter/</loc>
-		<lastmod>2024-01-11</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://arwan.me/tags/android/</loc>
-		<lastmod>2024-01-11</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://arwan.me/tags/tutorial/</loc>
 		<lastmod>2024-01-11</lastmod>
 	</url>
 </urlset>
