@@ -16,7 +16,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({
 		"./public/css/*.css": "/css/",
 		"./public/img": "/",
-		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
+		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
+		"./CNAME": "/CNAME"
 	});
 
 	// Run Eleventy when these files change:
