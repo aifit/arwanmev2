@@ -128,8 +128,8 @@ code:not([class*="language-diff-"]) {
 		counter-increment: lineNumber;
 		display: inline-block;
 		font-variant-numeric: tabular-nums;
-		margin-right: $global-space/2;
-		padding-right: $global-space/2;
+		margin-right: calc($global-space/2);
+		padding-right: calc($global-space/2);
 		text-align: center;
 		width: $global-space;
 	}
