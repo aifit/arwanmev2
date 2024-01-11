@@ -5,8 +5,8 @@
 pre[class*="language-diff-"] {
 	--eleventy-code-padding: 2em;
 	padding: $global-space;
-	padding-top: $global-space/2;
-	padding-bottom: $global-space/2;
+	padding-top: calc($global-space/2);
+	padding-bottom: calc($global-space/2);
 
 	.token.deleted {
 		background-color: hsl(0, 62%, 22%);

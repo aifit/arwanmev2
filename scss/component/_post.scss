@@ -16,7 +16,7 @@
 	&__tag {
 		display: flex;
 		color: $color-grey-lighter;
-		font-size: 1.03rem;
+		font-size: 1rem;
 		font-family: var($font-heading);
 		margin-top: 10px;
 		line-height: 1.6;
@@ -70,7 +70,7 @@
 			font-size: 0.923rem;
 
 			@include breakpoint(tablet-up) {
-				font-size: clamp(0.87rem, 0.87rem + ((1vw - 0.2rem) * 0.571), 1rem);
+				font-size: 0.956rem;
 			}
 		}
 

@@ -5,12 +5,12 @@ $global-radius: 2px;
 $global-letter-spacing: 0.009em;
 
 // color
-$color-white: #acacac;
+$color-white: #ababab;
 $color-white-lighter: #cecece;
 $color-black: #111111;
-$color-black-lighter: #1f1f1f;
+$color-black-lighter: #1d1d1d;
 $color-grey: #3a3a3a;
-$color-grey-lighter: #757575;
+$color-grey-lighter: #787878;
 $color-accent: #c2fc65;
 $color-accent-lighter: #85bf22;
 $color-code: #81a1da;
@@ -24,10 +24,10 @@ $font-mono: 'Jetbrains Mono', Consolas, Menlo, Monaco, Andale Mono WT, Andale Mo
 // https://css-tricks.com/snippets/css/fluid-typography/
 $min-width: 320px;
 $max-width: 1024px;
-$min-font: 18px;
+$min-font: 17px;
 $max-font: 17px;
-$mod-1: 1.17; // mobile
-$mod-2: 1.17; // desktop
+$mod-1: 1.13; // mobile
+$mod-2: 1.13; // desktop
 
 // post detail
-$paragraph-width: 35rem;
+$paragraph-width: 38rem;
