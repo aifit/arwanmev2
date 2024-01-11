@@ -6,7 +6,7 @@
 
 	p {
 		max-width: 400px;
-		font-family: var(--font-body);
+		font-family: $font-body;
 		font-size: 0.9rem;
 
 		@include breakpoint(tablet-up) {

@@ -21,7 +21,7 @@
 		margin-left: calc($global-space/4.5);
 		margin-right: calc($global-space/2.5);
 		letter-spacing: $global-letter-spacing;
-		font-family: var(--font-heading);
+		font-family: var($font-heading);
 
 		@include breakpoint(tablet-up) {
 			margin-right: 0;

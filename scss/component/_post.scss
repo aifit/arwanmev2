@@ -17,7 +17,7 @@
 		display: flex;
 		color: $color-grey-lighter;
 		font-size: 1.03rem;
-		font-family: var(--font-heading);
+		font-family: var($font-heading);
 		margin-top: 10px;
 		line-height: 1.6;
 
@@ -66,11 +66,11 @@
 		p {
 			max-width: $paragraph-width;
 			margin-bottom: $global-space;
-			font-family: var(--font-body);
+			font-family: $font-body;
 			font-size: 0.923rem;
 
 			@include breakpoint(tablet-up) {
-				font-size: clamp(0.9rem, 0.9rem + ((1vw - 0.2rem) * 0.571), 1rem);
+				font-size: clamp(0.87rem, 0.87rem + ((1vw - 0.2rem) * 0.571), 1rem);
 			}
 		}
 
