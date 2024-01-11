@@ -6,8 +6,7 @@
 
 		&:hover {
 			.c-list__text {
-				color: $color-white-lighter;
-				text-decoration-color: $color-grey-lighter;
+				color: $color-white;
 			}
 			svg {
 				stroke: $color-accent-lighter;
@@ -31,8 +30,6 @@
 		color: $color-white-lighter;
 		transition: $global-transition;
 		font-family: $font-heading;
-		text-decoration: underline;
-		text-decoration-color: transparent;
 
 		@include breakpoint(tablet-up) {
 			margin-right: 0;
@@ -42,6 +39,17 @@
 
 	&--footer {
 		margin-right: calc($global-space/1.2);
+
+		.c-list__item {
+			&:hover {
+				.c-list__text {
+					color: $color-white-lighter;
+				}
+				svg {
+					stroke: $color-white;
+				}
+			}
+		}
 
 		&:last-child {
 			margin-right: 0;
@@ -59,7 +67,6 @@
 			font-size: 0.7rem;
 			font-family: $font-body;
 			margin-right: 0;
-			text-decoration: none;
 			color: $color-white;
 		}
 	}
