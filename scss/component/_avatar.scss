@@ -3,13 +3,10 @@
 	height: 120px;
 	border-radius: $global-radius;
 	overflow: hidden;
-	padding: 2px;
-	background: $color-grey-lighter;
 
 	img {
 		width: 100%;
 		height: auto;
-		border-radius: $global-radius - 1;
 	}
 
 	@include breakpoint(tablet-up) {

@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	font-weight: 500;
 	color: $color-white-lighter;
-	font-family: var($font-heading);
+	font-family: $font-heading;
 	margin: $global-space * 1.7 0 $global-space;
 }
 
