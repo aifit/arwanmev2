@@ -1,5 +1,10 @@
 .c-post {
 	padding-bottom: 60px;
+	min-height: calc(100vh - 219px);
+
+	@include breakpoint(tablet-up) {
+		min-height: calc(100vh - 207px);
+	}
 
 	&__title {
 		margin-bottom: 0.8rem;
