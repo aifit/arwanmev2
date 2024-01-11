@@ -1,9 +1,3 @@
-:root {
-	--font-heading: 'Hanken Grotesk', -apple-system, system-ui, sans-serif;
-	--font-body: 'Inter', -apple-system, system-ui, sans-serif;
-	--font-family-monospace: 'Jetbrains Mono', Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-}
-
 * {
 	box-sizing: border-box;
 	// firefox only
@@ -33,7 +27,7 @@ html {
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-body);
+	font-family: $font-body;
 	color: $color-white;
 	max-width: $max-width;
 
@@ -63,7 +57,7 @@ h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	color: $color-white-lighter;
-	font-family: var(--font-heading);
+	font-family: var($font-heading);
 }
 
 .header-anchor {
@@ -100,9 +94,13 @@ table th {
 
 pre,
 code {
-	font-family: var(--font-family-monospace);
+	font-family: $font-mono;
 	border-radius: $global-radius;
 	color: $color-code;
+}
+
+pre {
+  counter-reset: lineNumber;
 }
 
 pre:not([class*="language-"]) {
@@ -121,13 +119,29 @@ code:not([class*="language-"]) {
 	font-size: 0.81rem;
 }
 
+// line number inside code higlighter
+code:not([class*="language-diff-"]) {
+	.highlight-line:before {
+		border-right: 1px solid $color-grey;
+		color: $color-grey-lighter;
+		content: counter(lineNumber);
+		counter-increment: lineNumber;
+		display: inline-block;
+		font-variant-numeric: tabular-nums;
+		margin-right: $global-space/2;
+		padding-right: $global-space/2;
+		text-align: center;
+		width: $global-space;
+	}
+}
+
 pre[class*="language-"],
 code[class*="language-"] {
 	font-size: 0.75rem;
 	line-height: 1.65 !important;
-	font-family: var(--font-family-monospace);
+	font-family: $font-mono;
 	font-weight: 300;
-	opacity: 0.85;
+	opacity: 0.9;
 }
 
 pre[class*="language-"] {
@@ -143,7 +157,6 @@ pre[class*="language-"] {
 	@include breakpoint(tablet-up) {
 		margin-right: 0;
 		margin-left: 0;
-		border-left: 3px solid $color-grey;
 	}
 
 }

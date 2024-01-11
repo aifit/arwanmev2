@@ -3,43 +3,46 @@
  */
 
 pre[class*="language-diff-"] {
-	--eleventy-code-padding: 1.25em;
-	padding-left: var(--eleventy-code-padding);
-	padding-right: var(--eleventy-code-padding);
-}
-.token.deleted {
-	background-color: hsl(0, 51%, 37%);
-	color: inherit;
-}
-.token.inserted {
-	background-color: hsl(126, 31%, 39%);
-	color: inherit;
-}
+	--eleventy-code-padding: 2em;
+	padding: $global-space;
+	padding-top: $global-space/2;
+	padding-bottom: $global-space/2;
 
-/* Make the + and - characters unselectable for copy/paste */
-.token.prefix.unchanged,
-.token.prefix.inserted,
-.token.prefix.deleted {
-	-webkit-user-select: none;
-	user-select: none;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
-.token.prefix.inserted,
-.token.prefix.deleted {
-	width: var(--eleventy-code-padding);
-	background-color: rgba(0,0,0,.2);
-}
+	.token.deleted {
+		background-color: hsl(0, 62%, 22%);
+		color: inherit;
+	}
+	.token.inserted {
+		background-color: hsl(128, 63%, 13%);
+		color: inherit;
+	}
 
-/* Optional: full-width background color */
-.token.inserted:not(.prefix),
-.token.deleted:not(.prefix) {
-	display: block;
-	margin-left: calc(-1 * var(--eleventy-code-padding));
-	margin-right: calc(-1 * var(--eleventy-code-padding));
-	text-decoration: none; /* override del, ins, mark defaults */
-	color: inherit; /* override del, ins, mark defaults */
+	/* Make the + and - characters unselectable for copy/paste */
+	.token.prefix.unchanged,
+	.token.prefix.inserted,
+	.token.prefix.deleted {
+		-webkit-user-select: none;
+		user-select: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+	.token.prefix.inserted,
+	.token.prefix.deleted {
+		width: 25px;
+		background-color: rgba(0,0,0,.2);
+	}
+
+	/* Optional: full-width background color */
+	.token.inserted:not(.prefix),
+	.token.deleted:not(.prefix) {
+		display: inline-block;
+		margin-left: 0;
+		margin-right: 0;
+		text-decoration: none; /* override del, ins, mark defaults */
+		color: inherit; /* override del, ins, mark defaults */
+	}
+
 }
