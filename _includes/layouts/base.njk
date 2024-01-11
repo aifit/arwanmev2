@@ -8,6 +8,7 @@
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+				<link rel="canonical" href="https://arwan.me{{ page.url }}" />
     {%- css %}
     	{% include "public/css/index.css" %}
     {% endcss %}
