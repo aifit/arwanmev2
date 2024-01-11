@@ -7,7 +7,6 @@
 		&:hover {
 			.c-list__text {
 				color: $color-white-lighter;
-				border-color: $color-accent-lighter;
 			}
 			svg {
 				stroke: $color-accent-lighter;
@@ -31,9 +30,6 @@
 		color: $color-white;
 		transition: $global-transition;
 		font-family: $font-heading;
-		border-bottom: 1px solid transparent;
-		position: relative;
-		top: 1px;
 
 		@include breakpoint(tablet-up) {
 			margin-right: 0;
@@ -61,8 +57,6 @@
 			font-family: $font-body;
 			color: $color-white;
 			margin-right: 0;
-			border: 0;
-			top: 0;
 		}
 	}
 }
