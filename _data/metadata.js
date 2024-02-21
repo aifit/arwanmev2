@@ -2,6 +2,7 @@ module.exports = {
 	title: "Arwan Salafudin Ashari - Software Engineer",
 	logoText: "Ar.",
 	url: "https://arwan.me/",
+	sharer: "https://arwan.me/sharer.png",
 	language: "en",
 	description: "Experienced software engineer with a background in building mobile applications for the education technology and job portal industries.",
 	author: {
